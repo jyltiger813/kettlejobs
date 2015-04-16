@@ -1,0 +1,3 @@
+2014/12/08 17:28:37 - oracleToMysql - 开始项[T_SHOP_7]
+2014/12/08 17:28:37 - T_SHOP_7 - Loading transformation from XML file [file:///D:/WorkSpace/yiwugou_bi_etlaim/doc/kettle_model/oracleToMysql/T_SHOP.ktr]
+2014/12/08 17:28:37 - T_SHOP - 为了转换解除补丁开始  [T_SHOP]

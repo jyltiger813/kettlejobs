@@ -1,0 +1,50 @@
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : An error occurred intialising this step: 
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : Error occured while trying to connect to the database
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : Invalid JNDI connection yiwugou_en2 : Could not create connection to database server. Attempted reconnect 2 times. Giving up.
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 错误初始化步骤[表输出]
+2014/12/08 17:26:38 - T_SHOP - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 步骤 [表输出.0] 初始化失败!
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : Unexpected error rolling back the database connection.
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : org.pentaho.di.core.exception.KettleDatabaseException: 
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : Unable to get database metadata from this database connection
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at java.lang.Thread.run (Thread.java:745)
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.job.entries.job.JobEntryJobRunner.run (JobEntryJobRunner.java:68)
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.job.Job.execute (Job.java:445)
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.job.Job.execute (Job.java:667)
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.job.Job.execute (Job.java:528)
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.job.entries.trans.JobEntryTrans.execute (JobEntryTrans.java:1034)
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.trans.Trans.execute (Trans.java:395)
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.trans.Trans.prepareExecution (Trans.java:797)
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.trans.steps.tableoutput.TableOutput.dispose (TableOutput.java:708)
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.core.database.Database.rollback (Database.java:715)
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.core.database.Database.rollback (Database.java:726)
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.core.database.Database.getDatabaseMetaData (Database.java:3167)
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.core.database.Database.getDatabaseMetaData(Database.java:3171)
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.core.database.Database.rollback(Database.java:726)
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.core.database.Database.rollback(Database.java:715)
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.trans.steps.tableoutput.TableOutput.dispose(TableOutput.java:708)
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:797)
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.trans.Trans.execute(Trans.java:395)
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.job.entries.trans.JobEntryTrans.execute(JobEntryTrans.java:1034)
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.job.Job.execute(Job.java:528)
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.job.Job.execute(Job.java:667)
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.job.Job.execute(Job.java:445)
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.job.entries.job.JobEntryJobRunner.run(JobEntryJobRunner.java:68)
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at java.lang.Thread.run(Thread.java:745)
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : Caused by: java.lang.NullPointerException
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.core.database.Database.getDatabaseMetaData(Database.java:3167)
+2014/12/08 17:26:38 - 表输出.0 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	... 11 more
+2014/12/08 17:26:38 - T_SHOP_7 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : Unable to prepare for execution of the transformation
+2014/12/08 17:26:38 - T_SHOP_7 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : org.pentaho.di.core.exception.KettleException: 
+2014/12/08 17:26:38 - T_SHOP_7 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 无法初始化至少一个步骤.  执行无法开始!
+2014/12/08 17:26:38 - T_SHOP_7 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 
+2014/12/08 17:26:38 - T_SHOP_7 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 
+2014/12/08 17:26:38 - T_SHOP_7 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:823)
+2014/12/08 17:26:38 - T_SHOP_7 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.trans.Trans.execute(Trans.java:395)
+2014/12/08 17:26:38 - T_SHOP_7 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.job.entries.trans.JobEntryTrans.execute(JobEntryTrans.java:1034)
+2014/12/08 17:26:38 - T_SHOP_7 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.job.Job.execute(Job.java:528)
+2014/12/08 17:26:38 - T_SHOP_7 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.job.Job.execute(Job.java:667)
+2014/12/08 17:26:38 - T_SHOP_7 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.job.Job.execute(Job.java:445)
+2014/12/08 17:26:38 - T_SHOP_7 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at org.pentaho.di.job.entries.job.JobEntryJobRunner.run(JobEntryJobRunner.java:68)
+2014/12/08 17:26:38 - T_SHOP_7 - ERROR (version 4.3.0-stable, build 16786 from 2012-04-24 14.11.32 by buildguy) : 	at java.lang.Thread.run(Thread.java:745)
