@@ -1,0 +1,500 @@
+INFO  06-03 04:19:42,594 - 表输入 - Finished reading query, closing connection.
+INFO  06-03 04:19:42,595 - 表输入 - Finished processing (I=3, O=0, R=0, W=3, U=0, E=0)
+INFO  06-03 04:19:42,597 - 字段选择 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+INFO  06-03 04:19:42,624 - Microsoft Excel Writer - Finished processing (I=0, O=4, R=3, W=3, U=0, E=0)
+INFO  06-03 04:19:42,626 - search_quality_seo_sem - Starting entry [week_seo]
+INFO  06-03 04:19:42,626 - week_seo - Loading transformation from XML file [file:///opt/pentaho/etl/search_quality_evaluate_mail/week_seo.ktr]
+INFO  06-03 04:19:42,643 - week_seo - Dispatching started for transformation [week_seo]
+INFO  06-03 04:19:42,675 - 表输入 - Finished reading query, closing connection.
+INFO  06-03 04:19:42,676 - 表输入 - Finished processing (I=10, O=0, R=0, W=10, U=0, E=0)
+INFO  06-03 04:19:42,678 - 字段选择 - Finished processing (I=0, O=0, R=10, W=10, U=0, E=0)
+INFO  06-03 04:19:42,719 - Microsoft Excel Writer - Finished processing (I=0, O=11, R=10, W=10, U=0, E=0)
+INFO  06-03 04:19:42,721 - search_quality_seo_sem - Starting entry [day_seo]
+INFO  06-03 04:19:42,721 - day_seo - Loading transformation from XML file [file:///opt/pentaho/etl/search_quality_evaluate_mail/day_seo.ktr]
+INFO  06-03 04:19:42,743 - day_seo - Dispatching started for transformation [day_seo]
+INFO  06-03 04:19:42,778 - 表输入 - Finished reading query, closing connection.
+INFO  06-03 04:19:42,779 - 表输入 - Finished processing (I=63, O=0, R=0, W=63, U=0, E=0)
+INFO  06-03 04:19:42,781 - 字段选择 - Finished processing (I=0, O=0, R=63, W=63, U=0, E=0)
+INFO  06-03 04:19:42,844 - Microsoft Excel Writer - Finished processing (I=0, O=64, R=63, W=63, U=0, E=0)
+INFO  06-03 04:19:42,845 - search_quality_seo_sem - Starting entry [replace_sem_datas]
+INFO  06-03 04:19:42,846 - replace_sem_datas - Loading transformation from XML file [file:///opt/pentaho/etl/search_quality_evaluate_mail/replace_sem_datas.ktr]
+INFO  06-03 04:19:42,869 - replace_sem_datas - Dispatching started for transformation [replace_sem_datas]
+INFO  06-03 04:19:43,428 - 执行SQL脚本 - Finished reading query, closing connection.
+INFO  06-03 04:19:43,429 - 执行SQL脚本 - Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+INFO  06-03 04:19:43,430 - search_quality_seo_sem - Starting entry [month_sem]
+INFO  06-03 04:19:43,431 - month_sem - Loading transformation from XML file [file:///opt/pentaho/etl/search_quality_evaluate_mail/month_sem.ktr]
+INFO  06-03 04:19:43,445 - month_sem - Dispatching started for transformation [month_sem]
+INFO  06-03 04:19:43,482 - 表输入 - Finished reading query, closing connection.
+INFO  06-03 04:19:43,483 - 表输入 - Finished processing (I=3, O=0, R=0, W=3, U=0, E=0)
+INFO  06-03 04:19:43,484 - 字段选择 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+INFO  06-03 04:19:43,505 - Microsoft Excel Writer - Finished processing (I=0, O=4, R=3, W=3, U=0, E=0)
+INFO  06-03 04:19:43,507 - search_quality_seo_sem - Starting entry [week_sem]
+INFO  06-03 04:19:43,507 - week_sem - Loading transformation from XML file [file:///opt/pentaho/etl/search_quality_evaluate_mail/week_sem.ktr]
+INFO  06-03 04:19:43,526 - week_sem - Dispatching started for transformation [week_sem]
+INFO  06-03 04:19:43,559 - 表输入 - Finished reading query, closing connection.
+INFO  06-03 04:19:43,560 - 表输入 - Finished processing (I=10, O=0, R=0, W=10, U=0, E=0)
+INFO  06-03 04:19:43,561 - 字段选择 - Finished processing (I=0, O=0, R=10, W=10, U=0, E=0)
+INFO  06-03 04:19:43,595 - Microsoft Excel Writer - Finished processing (I=0, O=11, R=10, W=10, U=0, E=0)
+INFO  06-03 04:19:43,597 - search_quality_seo_sem - Starting entry [day_sem]
+INFO  06-03 04:19:43,597 - day_sem - Loading transformation from XML file [file:///opt/pentaho/etl/search_quality_evaluate_mail/day_sem.ktr]
+INFO  06-03 04:19:43,614 - day_sem - Dispatching started for transformation [day_sem]
+INFO  06-03 04:19:43,647 - 表输入 - Finished reading query, closing connection.
+INFO  06-03 04:19:43,648 - 表输入 - Finished processing (I=63, O=0, R=0, W=63, U=0, E=0)
+INFO  06-03 04:19:43,650 - 字段选择 - Finished processing (I=0, O=0, R=63, W=63, U=0, E=0)
+INFO  06-03 04:19:43,688 - Microsoft Excel Writer - Finished processing (I=0, O=64, R=63, W=63, U=0, E=0)
+INFO  06-03 04:19:43,690 - search_quality_seo_sem - Finished job entry [day_sem] (result=[true])
+INFO  06-03 04:19:43,690 - search_quality_seo_sem - Finished job entry [week_sem] (result=[true])
+INFO  06-03 04:19:43,690 - search_quality_seo_sem - Finished job entry [month_sem] (result=[true])
+INFO  06-03 04:19:43,690 - search_quality_seo_sem - Finished job entry [replace_sem_datas] (result=[true])
+INFO  06-03 04:19:43,691 - search_quality_seo_sem - Finished job entry [day_seo] (result=[true])
+INFO  06-03 04:19:43,691 - search_quality_seo_sem - Finished job entry [week_seo] (result=[true])
+INFO  06-03 04:19:43,691 - search_quality_seo_sem - Finished job entry [month_seo] (result=[true])
+INFO  06-03 04:19:43,691 - search_quality_seo_sem - Finished job entry [replace_seo_datas] (result=[true])
+INFO  06-03 04:19:43,696 - search_quality_evaluate_mail_main - Starting entry [Mail]
+INFO  06-03 04:19:43,781 - Mail - Added file '///opt/pentaho/etl/search_quality_evaluate_mail/static_seo_sem_20150305_20150306.xlsx' to the mail message.
+INFO  06-03 04:19:43,781 - Mail - Added file '///opt/pentaho/etl/search_quality_evaluate_mail/inner_search_keyword_20150305_20150306.xlsx' to the mail message.
+ERROR 06-03 04:19:44,708 - Mail - Problem while sending message: javax.mail.SendFailedException: Invalid Addresses;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 550 Mailbox not found or access denied
+
+ERROR 06-03 04:19:44,708 - Mail -     ** Invalid Addresses
+ERROR 06-03 04:19:44,778 - Mail -          zhengshuo@yiwugou.com
+ERROR 06-03 04:19:44,778 - Mail -     ** ValidUnsent Addresses
+ERROR 06-03 04:19:44,778 - Mail -          wangjianjun@yiwugou.com
+ERROR 06-03 04:19:44,779 - Mail -          gongchenghao@yiwugou.com
+ERROR 06-03 04:19:44,779 - Mail -          louqinfeng@yiwugou.com
+ERROR 06-03 04:19:44,779 - Mail -          chenkaifeng@yiwugou.com
+ERROR 06-03 04:19:44,779 - Mail -          wuqingli@yiwugou.com
+ERROR 06-03 04:19:44,779 - Mail -          shouxingliang@yiwugou.com
+ERROR 06-03 04:19:44,779 - Mail -          yangbinming@yiwugou.com
+ERROR 06-03 04:19:44,779 - Mail -          jinyongliang@yiwugou.com
+ERROR 06-03 04:19:44,779 - Mail -          wanglifang@yiwugou.com
+INFO  06-03 04:19:44,780 - search_quality_evaluate_mail_main - Finished job entry [Mail] (result=[false])
+INFO  06-03 04:19:44,780 - search_quality_evaluate_mail_main - Finished job entry [search_quality_seo_sem] (result=[false])
+INFO  06-03 04:19:44,780 - search_quality_evaluate_mail_main - Finished job entry [day_static] (result=[false])
+INFO  06-03 04:19:44,780 - search_quality_evaluate_mail_main - Finished job entry [week_static] (result=[false])
+INFO  06-03 04:19:44,780 - search_quality_evaluate_mail_main - Finished job entry [month_static] (result=[false])
+INFO  06-03 04:19:44,781 - search_quality_evaluate_mail_main - Finished job entry [replace_datas] (result=[false])
+INFO  06-03 04:19:44,781 - search_quality_evaluate_mail_main - Finished job entry [generate_excel] (result=[false])
+INFO  06-03 04:19:44,789 - dispatch_main - Starting entry [DUMMY 10 2]
+INFO  06-03 04:19:44,790 - dispatch_main - Starting entry [search_engine_crawl_statistic]
+INFO  06-03 04:19:44,881 - search_robot_access_statistic - Starting entry [set_env]
+INFO  06-03 04:19:44,882 - set_env - Loading transformation from XML file [file:///opt/pentaho/etl/search_robot_access_statistic/set_env_search_robot.ktr]
+INFO  06-03 04:19:44,892 - robot_set_env_out - Dispatching started for transformation [robot_set_env_out]
+INFO  06-03 04:19:44,916 - Table input - Finished reading query, closing connection.
+INFO  06-03 04:19:44,916 - Table input - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+INFO  06-03 04:19:44,917 - Set Variables - Setting environment variables...
+INFO  06-03 04:19:44,917 - Set Variables - Set variable YESTERDAY_STR to value [20150305]
+INFO  06-03 04:19:44,917 - Set Variables - Set variable DAY_STR to value [20150306]
+INFO  06-03 04:19:44,917 - Set Variables - Set variable DATE_N to value [20150306]
+INFO  06-03 04:19:44,917 - Set Variables - Set variable DATE_S to value [20150305]
+INFO  06-03 04:19:44,917 - Set Variables - Set variable DATE_10 to value [20150224]
+INFO  06-03 04:19:44,917 - Set Variables - Set variable DATE_7 to value [20150226]
+INFO  06-03 04:19:44,919 - Set Variables - Finished after 1 rows.
+INFO  06-03 04:19:44,920 - Set Variables - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+INFO  06-03 04:19:44,922 - search_robot_access_statistic - Starting entry [delDataBeforeInsert]
+INFO  06-03 04:19:44,922 - deldatas - Loading transformation from XML file [file:///opt/pentaho/etl/search_robot_access_statistic/deldatas.ktr]
+INFO  06-03 04:19:44,933 - deldatas - Dispatching started for transformation [deldatas]
+INFO  06-03 04:19:44,952 - 执行SQL脚本 - Finished reading query, closing connection.
+INFO  06-03 04:19:44,953 - 执行SQL脚本 - Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+INFO  06-03 04:19:44,955 - search_robot_access_statistic - Starting entry [search_engine]
+INFO  06-03 04:19:44,956 - acceess_shop_count - Loading transformation from XML file [file:///opt/pentaho/etl/search_robot_access_statistic/access_shop_page_day.ktr]
+INFO  06-03 04:19:44,974 - access_shop_page_day - Dispatching started for transformation [access_shop_page_day]
+INFO  06-03 04:19:44,998 - Table output - Connected to database [nginxraw] (commit=100)
+INFO  06-03 04:19:50,063 - 360 - Finished reading query, closing connection.
+INFO  06-03 04:19:50,064 - 360 - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+INFO  06-03 04:19:59,114 - sogou - Finished reading query, closing connection.
+INFO  06-03 04:19:59,116 - sogou - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+INFO  06-03 04:20:03,856 - bing_bot - Finished reading query, closing connection.
+INFO  06-03 04:20:03,857 - bing_bot - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+INFO  06-03 04:20:03,895 - baidu - Finished reading query, closing connection.
+INFO  06-03 04:20:03,896 - baidu - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+INFO  06-03 04:20:03,980 - goolg_num - Finished reading query, closing connection.
+INFO  06-03 04:20:03,980 - goolg_num - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+INFO  06-03 04:20:04,195 - Merge Join - Finished processing (I=0, O=0, R=2, W=1, U=0, E=0)
+INFO  06-03 04:20:04,496 - Merge Join 2 - Finished processing (I=0, O=0, R=2, W=1, U=0, E=0)
+INFO  06-03 04:20:04,796 - Merge Join 3 - Finished processing (I=0, O=0, R=2, W=1, U=0, E=0)
+INFO  06-03 04:20:05,097 - Merge Join 4 - Finished processing (I=0, O=0, R=2, W=1, U=0, E=0)
+INFO  06-03 04:20:05,099 - Select values - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+INFO  06-03 04:20:05,102 - Table output - Finished processing (I=0, O=1, R=1, W=1, U=0, E=0)
+INFO  06-03 04:20:05,108 - search_robot_access_statistic - Finished job entry [search_engine] (result=[true])
+INFO  06-03 04:20:05,108 - search_robot_access_statistic - Finished job entry [delDataBeforeInsert] (result=[true])
+INFO  06-03 04:20:05,108 - search_robot_access_statistic - Finished job entry [set_env] (result=[true])
+INFO  06-03 04:20:05,110 - dispatch_main - Starting entry [agg_app_day]
+INFO  06-03 04:20:05,125 - agg_app_day - Starting entry [app_agg_day]
+INFO  06-03 04:20:05,125 - app_agg_day - Loading transformation from XML file [file:///opt/pentaho/etl/agg_app_day/app_agg_day.ktr]
+INFO  06-03 04:20:05,140 - app_agg_day - Dispatching started for transformation [app_agg_day]
+INFO  06-03 04:20:05,160 - Table output - Connected to database [nginxraw] (commit=100)
+INFO  06-03 04:20:15,803 - ios_pv_num - Finished reading query, closing connection.
+INFO  06-03 04:20:15,803 - app_pv_num - Finished reading query, closing connection.
+INFO  06-03 04:20:15,804 - ios_pv_num - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+INFO  06-03 04:20:15,804 - app_pv_num - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+INFO  06-03 04:20:15,808 - android_pv_num - Finished reading query, closing connection.
+INFO  06-03 04:20:15,808 - android_pv_num - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+INFO  06-03 04:20:15,809 - android_ip_num - Finished reading query, closing connection.
+INFO  06-03 04:20:15,809 - android_ip_num - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+INFO  06-03 04:20:15,811 - ios_ip_num - Finished reading query, closing connection.
+INFO  06-03 04:20:15,811 - ios_ip_num - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+INFO  06-03 04:20:15,815 - app_ip_num - Finished reading query, closing connection.
+INFO  06-03 04:20:15,815 - app_ip_num - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+INFO  06-03 04:20:16,115 - Merge Join - Finished processing (I=0, O=0, R=2, W=1, U=0, E=0)
+INFO  06-03 04:20:16,416 - Merge Join 2 - Finished processing (I=0, O=0, R=2, W=1, U=0, E=0)
+INFO  06-03 04:20:16,716 - Merge Join 3 - Finished processing (I=0, O=0, R=2, W=1, U=0, E=0)
+INFO  06-03 04:20:17,016 - Merge Join 4 - Finished processing (I=0, O=0, R=2, W=1, U=0, E=0)
+INFO  06-03 04:20:17,317 - Merge Join 5 - Finished processing (I=0, O=0, R=2, W=1, U=0, E=0)
+INFO  06-03 04:20:17,319 - Select values - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+INFO  06-03 04:20:17,337 - Table output - Finished processing (I=0, O=1, R=1, W=1, U=0, E=0)
+INFO  06-03 04:20:17,340 - agg_app_day - Finished job entry [app_agg_day] (result=[true])
+INFO  06-03 04:20:17,343 - dispatch_main - Finished job entry [agg_app_day] (result=[true])
+INFO  06-03 04:20:17,343 - dispatch_main - Starting entry [agg_session_id_year]
+INFO  06-03 04:20:17,357 - agg_session_id_year - Starting entry [www_work_wap_session_id_year]
+INFO  06-03 04:20:17,357 - www_work_wap_session_id_year - Loading transformation from XML file [file:///opt/pentaho/etl/agg_session_id_year/www_work_wap_session_id_year.ktr]
+INFO  06-03 04:20:17,369 - www_work_wap_session_id_year - Dispatching started for transformation [www_work_wap_session_id_year]
+INFO  06-03 04:20:17,389 - 表输出 - Connected to database [nginxraw] (commit=1000)
+INFO  06-03 04:20:19,584 - session_id_year_wap - Finished reading query, closing connection.
+INFO  06-03 04:20:19,585 - session_id_year_wap - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+INFO  06-03 04:20:22,750 - session_id_year_work - Finished reading query, closing connection.
+INFO  06-03 04:20:22,751 - session_id_year_work - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+INFO  06-03 04:20:42,823 - session_id_year_www - Finished reading query, closing connection.
+INFO  06-03 04:20:42,824 - session_id_year_www - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+INFO  06-03 04:20:43,123 - Merge Join - Finished processing (I=0, O=0, R=2, W=1, U=0, E=0)
+INFO  06-03 04:20:43,424 - Merge Join 2 - Finished processing (I=0, O=0, R=2, W=1, U=0, E=0)
+INFO  06-03 04:20:43,426 - 字段选择 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+INFO  06-03 04:20:43,448 - 表输出 - Finished processing (I=0, O=1, R=1, W=1, U=0, E=0)
+INFO  06-03 04:20:43,451 - agg_session_id_year - Finished job entry [www_work_wap_session_id_year] (result=[true])
+INFO  06-03 04:20:43,453 - dispatch_main - Finished job entry [agg_session_id_year] (result=[true])
+INFO  06-03 04:20:43,453 - dispatch_main - Finished job entry [search_engine_crawl_statistic] (result=[true])
+INFO  06-03 04:20:43,453 - dispatch_main - Finished job entry [DUMMY 10 2] (result=[true])
+INFO  06-03 04:20:43,453 - dispatch_main - Finished job entry [search_quality_evaluate_mail_main] (result=[true])
+INFO  06-03 04:20:43,453 - dispatch_main - Starting entry [response_time_statistic]
+INFO  06-03 04:20:43,483 - response_time_statistic_main - response_time_statistic_main
+INFO  06-03 04:21:43,487 - response_time_statistic_main - Starting entry [set_env]
+INFO  06-03 04:21:43,488 - set_env - Loading transformation from XML file [file:///opt/pentaho/etl/response_time_statistic/response_time_set_env_out.ktr]
+INFO  06-03 04:21:43,500 - set_env_out - Dispatching started for transformation [set_env_out]
+INFO  06-03 04:21:43,519 - Table input - Finished reading query, closing connection.
+INFO  06-03 04:21:43,519 - Set Variables - Setting environment variables...
+INFO  06-03 04:21:43,520 - Set Variables - Set variable DATE_N to value [20150306]
+INFO  06-03 04:21:43,520 - Set Variables - Set variable DATE_S to value [20150305]
+INFO  06-03 04:21:43,520 - Set Variables - Set variable DATE_10 to value [20150224]
+INFO  06-03 04:21:43,520 - Table input - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+INFO  06-03 04:21:43,520 - Set Variables - Set variable DATE_7 to value [20150226]
+INFO  06-03 04:21:43,520 - Set Variables - Set variable YESTERDAY_STR to value [20150305]
+INFO  06-03 04:21:43,520 - Set Variables - Set variable DAY_STR to value [20150306]
+INFO  06-03 04:21:43,520 - Set Variables - Set variable yesterday_time to value [20150305000000]
+INFO  06-03 04:21:43,520 - Set Variables - Set variable day_time to value [20150306000000]
+INFO  06-03 04:21:43,523 - Set Variables - Finished after 1 rows.
+INFO  06-03 04:21:43,523 - Set Variables - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+INFO  06-03 04:21:43,525 - response_time_statistic_main - Starting entry [response_time_out_source]
+INFO  06-03 04:21:43,525 - response_time_out_source - Loading transformation from XML file [file:///opt/pentaho/etl/response_time_statistic/response_time_out_source.ktr]
+INFO  06-03 04:21:43,534 - order_out_source - Dispatching started for transformation [order_out_source]
+INFO  06-03 04:21:44,031 - Table input 2 2 - Finished reading query, closing connection.
+INFO  06-03 04:21:44,034 - Select values 3 - Finished processing (I=0, O=0, R=2637, W=2637, U=0, E=0)
+INFO  06-03 04:21:44,034 - Table input 2 2 - Finished processing (I=2637, O=0, R=0, W=2637, U=0, E=0)
+INFO  06-03 04:21:44,516 - Microsoft Excel Output 2 2 - Finished processing (I=0, O=2637, R=2637, W=2637, U=0, E=0)
+INFO  06-03 04:21:44,518 - response_time_statistic_main - Starting entry [response_over_time_goup_hour]
+INFO  06-03 04:21:44,518 - response_over_time_goup_hour - Loading transformation from XML file [file:///opt/pentaho/etl/response_time_statistic/response_time_out_hour.ktr]
+INFO  06-03 04:21:44,532 - order_out_source - Dispatching started for transformation [order_out_source]
+INFO  06-03 04:22:03,433 - Table input 2 2 - Finished reading query, closing connection.
+INFO  06-03 04:22:03,434 - Table input 2 2 - Finished processing (I=14, O=0, R=0, W=14, U=0, E=0)
+INFO  06-03 04:22:03,436 - Select values 3 - Finished processing (I=0, O=0, R=14, W=14, U=0, E=0)
+INFO  06-03 04:22:04,367 - Microsoft Excel Output 2 2 - Finished processing (I=0, O=14, R=14, W=14, U=0, E=0)
+INFO  06-03 04:22:04,369 - response_time_statistic_main - Starting entry [response_over_time_goup_min]
+INFO  06-03 04:22:04,370 - response_over_time_goup_min - Loading transformation from XML file [file:///opt/pentaho/etl/response_time_statistic/response_time_out_min.ktr]
+INFO  06-03 04:22:04,386 - order_out_source - Dispatching started for transformation [order_out_source]
+INFO  06-03 04:22:17,966 - Table input 2 2 - Finished reading query, closing connection.
+INFO  06-03 04:22:17,966 - Table input 2 2 - Finished processing (I=57, O=0, R=0, W=57, U=0, E=0)
+INFO  06-03 04:22:17,968 - Select values 3 - Finished processing (I=0, O=0, R=57, W=57, U=0, E=0)
+INFO  06-03 04:22:18,975 - Microsoft Excel Output 2 2 - Finished processing (I=0, O=57, R=57, W=57, U=0, E=0)
+INFO  06-03 04:22:18,977 - response_time_statistic_main - Starting entry [response_time_enter_page]
+INFO  06-03 04:22:18,978 - response_time_enter_page - Loading transformation from XML file [file:///opt/pentaho/etl/response_time_statistic/response_time_enter_page.ktr]
+INFO  06-03 04:22:19,230 - order_enter_page - Dispatching started for transformation [order_enter_page]
+INFO  06-03 04:22:19,408 - Table input 2 - Finished reading query, closing connection.
+INFO  06-03 04:22:19,411 - Select values - Finished processing (I=0, O=0, R=43, W=43, U=0, E=0)
+INFO  06-03 04:22:19,662 - Table input 2 - Finished processing (I=43, O=0, R=0, W=43, U=0, E=0)
+INFO  06-03 04:22:20,678 - Microsoft Excel Output 2 - Finished processing (I=0, O=43, R=43, W=43, U=0, E=0)
+INFO  06-03 04:22:20,681 - response_time_statistic_main - Starting entry [response_time_page_through]
+INFO  06-03 04:22:20,681 - response_time_page_through - Loading transformation from XML file [file:///opt/pentaho/etl/response_time_statistic/response_time_page_through.ktr]
+INFO  06-03 04:22:20,694 - order_page_through - Dispatching started for transformation [order_page_through]
+INFO  06-03 04:23:21,069 - Table input - Finished reading query, closing connection.
+INFO  06-03 04:23:21,070 - Table input - Finished processing (I=115, O=0, R=0, W=115, U=0, E=0)
+INFO  06-03 04:23:21,072 - Select values 2 - Finished processing (I=0, O=0, R=115, W=115, U=0, E=0)
+INFO  06-03 04:23:22,721 - Microsoft Excel Output - Finished processing (I=0, O=115, R=115, W=115, U=0, E=0)
+INFO  06-03 04:23:22,723 - response_time_statistic_main - Starting entry [error_page_404_500]
+INFO  06-03 04:23:22,724 - error_page_404_500 - Loading transformation from XML file [file:///opt/pentaho/etl/response_time_statistic/error_page_404_500.ktr]
+INFO  06-03 04:23:22,738 - error_page_404_500 - Dispatching started for transformation [error_page_404_500]
+INFO  06-03 04:23:24,558 - work_domain_redirect2error - Finished reading query, closing connection.
+INFO  06-03 04:23:24,559 - work_domain_redirect2error - Finished processing (I=63, O=0, R=0, W=63, U=0, E=0)
+INFO  06-03 04:23:24,561 - Select values 3 - Finished processing (I=0, O=0, R=63, W=63, U=0, E=0)
+INFO  06-03 04:23:24,721 - Microsoft Excel Output 2 2 - Finished processing (I=0, O=63, R=63, W=63, U=0, E=0)
+INFO  06-03 04:23:24,723 - response_time_statistic_main - Starting entry [error_page_404_500 2]
+INFO  06-03 04:23:24,723 - error_page_404_500 2 - Loading transformation from XML file [file:///opt/pentaho/etl/response_time_statistic/error_page_404_500_1.ktr]
+INFO  06-03 04:23:24,737 - error_page_404_500 - Dispatching started for transformation [error_page_404_500]
+INFO  06-03 04:23:26,749 - work_domain_redirect2error - Finished reading query, closing connection.
+INFO  06-03 04:23:26,749 - work_domain_redirect2error - Finished processing (I=19, O=0, R=0, W=19, U=0, E=0)
+INFO  06-03 04:23:26,752 - Select values 3 - Finished processing (I=0, O=0, R=19, W=19, U=0, E=0)
+INFO  06-03 04:23:26,880 - Microsoft Excel Output 2 2 - Finished processing (I=0, O=19, R=19, W=19, U=0, E=0)
+INFO  06-03 04:23:26,882 - response_time_statistic_main - Starting entry [error_page_404_500 3]
+INFO  06-03 04:23:26,882 - error_page_404_500 3 - Loading transformation from XML file [file:///opt/pentaho/etl/response_time_statistic/error_page_404_500_2.ktr]
+INFO  06-03 04:23:26,895 - error_page_404_500 - Dispatching started for transformation [error_page_404_500]
+INFO  06-03 04:23:29,954 - 404 - Finished reading query, closing connection.
+INFO  06-03 04:23:29,955 - 404 - Finished processing (I=1340, O=0, R=0, W=1340, U=0, E=0)
+INFO  06-03 04:23:29,957 - Select values 3 - Finished processing (I=0, O=0, R=1340, W=1340, U=0, E=0)
+INFO  06-03 04:23:30,114 - Microsoft Excel Output 2 2 - Finished processing (I=0, O=1340, R=1340, W=1340, U=0, E=0)
+INFO  06-03 04:23:30,116 - response_time_statistic_main - Starting entry [404_url_distinct]
+INFO  06-03 04:23:30,116 - 404_url_distinct - Loading transformation from XML file [file:///opt/pentaho/etl/response_time_statistic/error_page_url_distinct.ktr]
+INFO  06-03 04:23:30,133 - error_page_404_500 - Dispatching started for transformation [error_page_404_500]
+INFO  06-03 04:23:33,202 - work_domain_redirect2error - Finished reading query, closing connection.
+INFO  06-03 04:23:33,209 - Select values 3 - Finished processing (I=0, O=0, R=571, W=571, U=0, E=0)
+INFO  06-03 04:23:33,219 - work_domain_redirect2error - Finished processing (I=571, O=0, R=0, W=571, U=0, E=0)
+INFO  06-03 04:23:33,359 - Microsoft Excel Output 2 2 - Finished processing (I=0, O=571, R=571, W=571, U=0, E=0)
+INFO  06-03 04:23:33,361 - response_time_statistic_main - Starting entry [error_page_404_500 4]
+INFO  06-03 04:23:33,362 - error_page_404_500 4 - Loading transformation from XML file [file:///opt/pentaho/etl/response_time_statistic/error_page_404_500_3.ktr]
+INFO  06-03 04:23:33,376 - error_page_404_500 - Dispatching started for transformation [error_page_404_500]
+INFO  06-03 04:23:36,525 - work_domain_redirect2error - Finished reading query, closing connection.
+INFO  06-03 04:23:36,526 - work_domain_redirect2error - Finished processing (I=26, O=0, R=0, W=26, U=0, E=0)
+INFO  06-03 04:23:36,528 - Select values 3 - Finished processing (I=0, O=0, R=26, W=26, U=0, E=0)
+INFO  06-03 04:23:36,691 - Microsoft Excel Output 2 2 - Finished processing (I=0, O=26, R=26, W=26, U=0, E=0)
+INFO  06-03 04:23:36,693 - response_time_statistic_main - Starting entry [Mail]
+INFO  06-03 04:23:36,709 - Mail - Added file '///opt/pentaho/etl/response_time_statistic/page_response_time_statistic.xls' to the mail message.
+INFO  06-03 04:23:38,356 - response_time_statistic_main - Finished job entry [Mail] (result=[true])
+INFO  06-03 04:23:38,356 - response_time_statistic_main - Finished job entry [error_page_404_500 4] (result=[true])
+INFO  06-03 04:23:38,356 - response_time_statistic_main - Finished job entry [404_url_distinct] (result=[true])
+INFO  06-03 04:23:38,356 - response_time_statistic_main - Finished job entry [error_page_404_500 3] (result=[true])
+INFO  06-03 04:23:38,356 - response_time_statistic_main - Finished job entry [error_page_404_500 2] (result=[true])
+INFO  06-03 04:23:38,356 - response_time_statistic_main - Finished job entry [error_page_404_500] (result=[true])
+INFO  06-03 04:23:38,356 - response_time_statistic_main - Finished job entry [response_time_page_through] (result=[true])
+INFO  06-03 04:23:38,356 - response_time_statistic_main - Finished job entry [response_time_enter_page] (result=[true])
+INFO  06-03 04:23:38,356 - response_time_statistic_main - Finished job entry [response_over_time_goup_min] (result=[true])
+INFO  06-03 04:23:38,356 - response_time_statistic_main - Finished job entry [response_over_time_goup_hour] (result=[true])
+INFO  06-03 04:23:38,356 - response_time_statistic_main - Finished job entry [response_time_out_source] (result=[true])
+INFO  06-03 04:23:38,357 - response_time_statistic_main - Finished job entry [set_env] (result=[true])
+INFO  06-03 04:23:38,363 - dispatch_main - Finished job entry [response_time_statistic] (result=[true])
+INFO  06-03 04:23:38,363 - dispatch_main - Starting entry [seo_sem_evaluate]
+INFO  06-03 04:23:38,382 - sem_seo_evaluate - Starting entry [setenv]
+INFO  06-03 04:23:38,383 - setenv - Loading transformation from XML file [file:///opt/pentaho/etl/sem_seo_evaluate1/setenv1.ktr]
+INFO  06-03 04:23:38,393 - setenv1 - Dispatching started for transformation [setenv1]
+INFO  06-03 04:23:38,404 - Table input - Finished reading query, closing connection.
+INFO  06-03 04:23:38,404 - Table input - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+INFO  06-03 04:23:38,405 - Set Variables - Setting environment variables...
+INFO  06-03 04:23:38,405 - Set Variables - Set variable YESTERDAY_STR to value [20150305]
+INFO  06-03 04:23:38,405 - Set Variables - Set variable DAY_STR to value [20150306]
+INFO  06-03 04:23:38,407 - Set Variables - Finished after 1 rows.
+INFO  06-03 04:23:38,407 - Set Variables - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+INFO  06-03 04:23:38,409 - sem_seo_evaluate - Starting entry [fetch_raw_data]
+INFO  06-03 04:23:38,409 - fetch_raw_data - Loading transformation from XML file [file:///opt/pentaho/etl/sem_seo_evaluate1/fetch_raw_data]
+INFO  06-03 04:23:38,420 - fetch_raw_data - Dispatching started for transformation [fetch_raw_data]
+INFO  06-03 04:24:21,632 - Execute SQL script - Finished reading query, closing connection.
+INFO  06-03 04:24:21,632 - Execute SQL script - Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+INFO  06-03 04:24:21,634 - sem_seo_evaluate - Starting entry [sem_seo_enter_fact_decode]
+INFO  06-03 04:24:21,634 - sem_seo_enter_fact_decode - Loading transformation from XML file [file:///opt/pentaho/etl/sem_seo_evaluate1/sem_seo_enter_fact.ktr]
+INFO  06-03 04:24:21,656 - sem_seo_enter_fact - Dispatching started for transformation [sem_seo_enter_fact]
+INFO  06-03 04:24:21,829 - Table output - Connected to database [nginx] (commit=1000)
+INFO  06-03 04:24:22,818 - Table output - WARNING: Couldn't insert row into table: [http://www.baidu.com/s?wd=\xE7\x99\xBE\xE5\xAE\xB6\xE4\xB9\x90|\xE5\x8D\x9A\xE5\xBD\xA9|\xE7\x9A\x87\xE5\x86\xA0\xE7\xBD\x91|\xE5\xA4\xAA\xE9\x98\xB3\xE5\x9F\x8E], [/], [-], [http://www.baidu.com/s], [/], [baidu.com], [xE5\xBD\xA9|\xE7\x9A\x87\xE5\x86\xA0\xE7\xBD\x91|\xE5\xA4\xAA\xE9\x98\xB3\xE5\x9F\x8E], [www.baidu.com], [seo]
+
+Error inserting/updating row
+Data truncation: Data too long for column 'key_word' at row 1
+
+INFO  06-03 04:24:25,181 - Table output - WARNING: Couldn't insert row into table: [http://www.baidu.com/s?wd=\xE7\x99\xBE\xE5\xAE\xB6\xE4\xB9\x90|\xE5\x8D\x9A\xE5\xBD\xA9|\xE7\x9A\x87\xE5\x86\xA0\xE7\xBD\x91|\xE5\xA4\xAA\xE9\x98\xB3\xE5\x9F\x8E], [/], [-], [http://www.baidu.com/s], [/], [baidu.com], [xE5\xBD\xA9|\xE7\x9A\x87\xE5\x86\xA0\xE7\xBD\x91|\xE5\xA4\xAA\xE9\x98\xB3\xE5\x9F\x8E], [www.baidu.com], [seo]
+
+Error inserting/updating row
+Data truncation: Data too long for column 'key_word' at row 1
+
+INFO  06-03 04:24:36,627 - Table input - linenr 50000
+INFO  06-03 04:24:38,604 - Table output - WARNING: Couldn't insert row into table: [http://www.baidu.com/s?wd=\xE7\x99\xBE\xE5\xAE\xB6\xE4\xB9\x90|\xE5\x8D\x9A\xE5\xBD\xA9|\xE7\x9A\x87\xE5\x86\xA0\xE7\xBD\x91|\xE5\xA4\xAA\xE9\x98\xB3\xE5\x9F\x8E], [/], [-], [http://www.baidu.com/s], [/], [baidu.com], [xE5\xBD\xA9|\xE7\x9A\x87\xE5\x86\xA0\xE7\xBD\x91|\xE5\xA4\xAA\xE9\x98\xB3\xE5\x9F\x8E], [www.baidu.com], [seo]
+
+Error inserting/updating row
+Data truncation: Data too long for column 'key_word' at row 1
+
+INFO  06-03 04:24:43,971 - Table output - WARNING: Couldn't insert row into table: [http://www.baidu.com/s?word=\xE4\xB9\x89\xE4\xB9\x8C\xE5\xB0\x8F\xE5\x95\x86\xE5\x93\x81\xE6\x89\xB9\xE5\x8F\x91\xE5\xB8\x82\xE5\x9C\xBA&tn=97279959_u2_hao_pg&ie=utf-8], [/shop_list/], [78724CA8802D50EE4B9609FAB96E0D91], [http://www.baidu.com/s], [/shop_list/i_1_1001.html], [baidu.com], [E5\x93\x81\xE6\x89\xB9\xE5\x8F\x91\xE5\xB8\x82\xE5\x9C\xBA], [www.baidu.com], [seo]
+
+Error inserting/updating row
+Data truncation: Data too long for column 'key_word' at row 1
+
+INFO  06-03 04:24:44,052 - Table output - WARNING: Couldn't insert row into table: [http://www.baidu.com/s?word=\xE4\xB9\x89\xE4\xB9\x8C\xE5\xB0\x8F\xE5\x95\x86\xE5\x93\x81\xE6\x89\xB9\xE5\x8F\x91\xE5\xB8\x82\xE5\x9C\xBA&tn=97279959_u2_hao_pg&ie=utf-8], [/product_list/], [2FD5F1CDFEE5994F00A505DFD884AE3B], [http://www.baidu.com/s], [/product_list/w_1_1001_2_7.html?EQN=S], [baidu.com], [E5\x93\x81\xE6\x89\xB9\xE5\x8F\x91\xE5\xB8\x82\xE5\x9C\xBA], [www.baidu.com], [sem]
+
+Error inserting/updating row
+Data truncation: Data too long for column 'key_word' at row 1
+
+INFO  06-03 04:24:52,779 - Select values - linenr 50000
+INFO  06-03 04:24:56,017 - Table output - WARNING: Couldn't insert row into table: [http://www.baidu.com/s?wd=\xE7\x99\xBE\xE5\xAE\xB6\xE4\xB9\x90|\xE5\x8D\x9A\xE5\xBD\xA9|\xE7\x9A\x87\xE5\x86\xA0\xE7\xBD\x91|\xE5\xA4\xAA\xE9\x98\xB3\xE5\x9F\x8E], [/], [-], [http://www.baidu.com/s], [/], [baidu.com], [xE5\xBD\xA9|\xE7\x9A\x87\xE5\x86\xA0\xE7\xBD\x91|\xE5\xA4\xAA\xE9\x98\xB3\xE5\x9F\x8E], [www.baidu.com], [seo]
+
+Error inserting/updating row
+Data truncation: Data too long for column 'key_word' at row 1
+
+INFO  06-03 04:25:02,031 - Table output - linenr 50000
+INFO  06-03 04:25:05,550 - Table input - Finished reading query, closing connection.
+INFO  06-03 04:25:05,551 - Table input - Finished processing (I=83734, O=0, R=0, W=83734, U=0, E=0)
+INFO  06-03 04:25:07,323 - Table output - WARNING: Couldn't insert row into table: [http://www.baidu.com/s?word=\xE9\x8D\x9D\xE5\xA0\x9D\xE7\x9A\xB5\xE5\xA9\x8A\xE3\x84\xA4\xE7\xB0\xA9\xE9\x8D\x8F\xE5\x86\xA9\xE6\xA3\xA9\xE9\x90\xA2\xE3\x84\xA5\xE6\x90\xA7\xE9\x8E\xB5\xE7\x91\xB0\xE5\xBD\x82&tn=90957968_hao_pg&ie=utf-8], [/hu/], [-], [http://www.baidu.com/s], [/hu/0567139.html], [baidu.com], [E3\x84\xA4\xE7\xB0\xA9\xE9\x8D\x8F\xE5\x86\xA9\xE6\xA3\xA9\xE9\x90\xA2\xE3\x84\xA5\xE6\x90\xA7\xE9\x8E\xB5\xE7\x91\xB0\xE5\xBD\x82], [www.baidu.com], [seo]
+
+Error inserting/updating row
+Data truncation: Data too long for column 'key_word' at row 1
+
+INFO  06-03 04:25:13,770 - User Defined Java Class - Finished processing (I=0, O=0, R=83734, W=83734, U=0, E=0)
+INFO  06-03 04:25:15,101 - Table output - WARNING: Couldn't insert row into table: [http://www.baidu.com/baidu?word=\xE4\xB9\x89\xE4\xB9\x8C\xE5\xB0\x8F\xE5\x95\x86\xE5\x93\x81\xE6\x89\xB9\xE5\x8F\x91\xE5\xB8\x82\xE5\x9C\xBA], [/], [-], [http://www.baidu.com/baidu], [/], [baidu.com], [E5\x93\x81\xE6\x89\xB9\xE5\x8F\x91\xE5\xB8\x82\xE5\x9C\xBA], [www.baidu.com], [seo]
+
+Error inserting/updating row
+Data truncation: Data too long for column 'key_word' at row 1
+
+INFO  06-03 04:25:17,332 - Table output - WARNING: Couldn't insert row into table: [http://www.baidu.com/s?word=\xE4\xB9\x89\xE4\xB9\x8C\xE5\xB0\x8F\xE5\x95\x86\xE5\x93\x81\xE6\x89\xB9\xE5\x8F\x91\xE5\xB8\x82\xE5\x9C\xBA&tn=94050566_hao_pg&ie=utf-8], [/product_list/], [EC2BB4341A2D9E5FABCA0B44A2CF4203], [http://www.baidu.com/s], [/product_list/w_1_1001_2_7.html?EQN=S], [baidu.com], [E5\x93\x81\xE6\x89\xB9\xE5\x8F\x91\xE5\xB8\x82\xE5\x9C\xBA], [www.baidu.com], [sem]
+
+Error inserting/updating row
+Data truncation: Data too long for column 'key_word' at row 1
+
+INFO  06-03 04:25:17,345 - Table output - WARNING: Couldn't insert row into table: [http://www.baidu.com/s?word=\xE4\xB9\x89\xE4\xB9\x8C\xE5\xB0\x8F\xE5\x95\x86\xE5\x93\x81\xE6\x89\xB9\xE5\x8F\x91\xE5\xB8\x82\xE5\x9C\xBA&tn=94050566_hao_pg&ie=utf-8], [/], [699FD91A6121FBC550DC20A98709EE7F], [http://www.baidu.com/s], [/], [baidu.com], [E5\x93\x81\xE6\x89\xB9\xE5\x8F\x91\xE5\xB8\x82\xE5\x9C\xBA], [www.baidu.com], [seo]
+
+Error inserting/updating row
+Data truncation: Data too long for column 'key_word' at row 1
+
+INFO  06-03 04:25:21,854 - Select values - Finished processing (I=0, O=0, R=83734, W=83734, U=0, E=0)
+INFO  06-03 04:25:24,283 - Table output - WARNING: Couldn't insert row into table: [http://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&tn=baidu&wd=\xE6\xB8\xB8\xE6\x88\x8FBC\xE9\xAB\x98\xE9\x98\xB2\xE5\xBE\xA1%20\xE6\x97\xA0\xE6\x95\x8C\xE4\xB8\x8D\xE6\xAD\xBB%20\xE6\x97\xA0\xE8\xA7\x86\xE4\xBB\xBB\xE4\xBD\x95\xE6\x94\xBB\xE5\x87\xBB%20%20\xE7\xBD\x91\xE7\xAB\x99%2058cdn.com%20%20%20qq%202511004496&rsv_spt=1&rsv_pq=ba36b4e400007e5b&rsv_t=ac60bU0kAtX7JcYPhO0WerAO0qaE2%2BENjCq586h9HF%2F1SV8cyjvTltcttsA&rsv_enter=0&rsv_sug3=42&rsv_sug4=2045&rsv_sug1=6&inputT=63676], [/], [-], [http://www.baidu.com/s], [/], [baidu.com], [\xE5\xBE\xA1 \xE6\x97\xA0\xE6\x95\x8C\xE4\xB8\x8D\xE6\xAD\xBB \xE6\x97\xA0\xE8\xA7\x86\xE4\xBB\xBB\xE4\xBD\x95\xE6\x94\xBB\xE5\x87\xBB  \xE7\xBD\x91\xE7\xAB\x99 58cdn.com   qq 2511004496], [www.baidu.com], [seo]
+
+Error inserting/updating row
+Data truncation: Data too long for column 'key_word' at row 1
+
+INFO  06-03 04:25:29,394 - Table output - Finished processing (I=0, O=83734, R=83734, W=83734, U=0, E=0)
+INFO  06-03 04:25:29,396 - sem_seo_evaluate - Starting entry [seo_sem_pv_rate]
+INFO  06-03 04:25:29,397 - seo_sem_pv_rate - Loading transformation from XML file [file:///opt/pentaho/etl/sem_seo_evaluate1/seo_sem_pv_rate.ktr]
+INFO  06-03 04:25:29,410 - seo_sem_pv_rate - Dispatching started for transformation [seo_sem_pv_rate]
+INFO  06-03 04:25:32,728 - seo_sem_pv_rate - Finished reading query, closing connection.
+INFO  06-03 04:25:32,729 - seo_sem_pv_rate - Finished processing (I=10251, O=0, R=0, W=10251, U=0, E=0)
+INFO  06-03 04:25:32,784 - 字段选择 - Finished processing (I=0, O=0, R=10251, W=10251, U=0, E=0)
+INFO  06-03 04:25:33,703 - Microsoft Excel Writer - Finished processing (I=0, O=10252, R=10251, W=10251, U=0, E=0)
+INFO  06-03 04:25:33,704 - sem_seo_evaluate - Starting entry [seo_pv_stat]
+INFO  06-03 04:25:33,705 - seo_pv_stat - Loading transformation from XML file [file:///opt/pentaho/etl/sem_seo_evaluate1/seo_pv_stat.ktr]
+INFO  06-03 04:25:33,749 - seo_pv - Dispatching started for transformation [seo_pv]
+INFO  06-03 04:25:36,845 - seo_classify_keyword_pv - Finished reading query, closing connection.
+INFO  06-03 04:25:36,846 - seo_classify_keyword_pv - Finished processing (I=9642, O=0, R=0, W=9642, U=0, E=0)
+INFO  06-03 04:25:36,848 - 字段选择 - Finished processing (I=0, O=0, R=9642, W=9642, U=0, E=0)
+INFO  06-03 04:25:37,297 - Microsoft Excel Writer - Finished processing (I=0, O=9643, R=9642, W=9642, U=0, E=0)
+INFO  06-03 04:25:37,299 - sem_seo_evaluate - Starting entry [sem_pv_rate]
+INFO  06-03 04:25:37,299 - sem_pv_rate - Loading transformation from XML file [file:///opt/pentaho/etl/sem_seo_evaluate1/sem_pv_rate.ktr]
+INFO  06-03 04:25:37,366 - sem_pv_rate - Dispatching started for transformation [sem_pv_rate]
+INFO  06-03 04:25:38,522 - sem_pv_rate - Finished reading query, closing connection.
+INFO  06-03 04:25:38,522 - sem_pv_rate - Finished processing (I=638, O=0, R=0, W=638, U=0, E=0)
+INFO  06-03 04:25:38,525 - 字段选择 - Finished processing (I=0, O=0, R=638, W=638, U=0, E=0)
+INFO  06-03 04:25:38,862 - Microsoft Excel Writer - Finished processing (I=0, O=639, R=638, W=638, U=0, E=0)
+INFO  06-03 04:25:38,864 - sem_seo_evaluate - Starting entry [domain_subdomain_pv_rate]
+INFO  06-03 04:25:38,864 - domain_subdomain_pv_rate - Loading transformation from XML file [file:///opt/pentaho/etl/sem_seo_evaluate1/domain_subdomain_pv_rate.ktr]
+INFO  06-03 04:25:38,942 - domain_subdomain_pv_rate - Dispatching started for transformation [domain_subdomain_pv_rate]
+INFO  06-03 04:25:45,397 - domain_subdomain_pv_rate - Finished reading query, closing connection.
+INFO  06-03 04:25:45,398 - domain_subdomain_pv_rate - Finished processing (I=796, O=0, R=0, W=796, U=0, E=0)
+INFO  06-03 04:25:45,400 - 字段选择 - Finished processing (I=0, O=0, R=796, W=796, U=0, E=0)
+INFO  06-03 04:25:45,409 - Microsoft Excel Writer - Finished processing (I=0, O=797, R=796, W=796, U=0, E=0)
+INFO  06-03 04:25:45,410 - sem_seo_evaluate - Starting entry [seo_domain_pv_rate]
+INFO  06-03 04:25:45,410 - seo_domain_pv_rate - Loading transformation from XML file [file:///opt/pentaho/etl/sem_seo_evaluate1/seo_domain_pv_rate.ktr]
+INFO  06-03 04:25:45,432 - seo_domain_pv_rate - Dispatching started for transformation [seo_domain_pv_rate]
+INFO  06-03 04:25:51,241 - seo_domain_pv_rate - Finished reading query, closing connection.
+INFO  06-03 04:25:51,241 - seo_domain_pv_rate - Finished processing (I=748, O=0, R=0, W=748, U=0, E=0)
+INFO  06-03 04:25:51,244 - 字段选择 - Finished processing (I=0, O=0, R=748, W=748, U=0, E=0)
+INFO  06-03 04:25:51,256 - Microsoft Excel Writer - Finished processing (I=0, O=749, R=748, W=748, U=0, E=0)
+INFO  06-03 04:25:51,258 - sem_seo_evaluate - Starting entry [sem_domain_pv_rate]
+INFO  06-03 04:25:51,258 - sem_domain_pv_rate - Loading transformation from XML file [file:///opt/pentaho/etl/sem_seo_evaluate1/sem_domain_pv_rate.ktr]
+INFO  06-03 04:25:51,285 - sem_domain_pv_rate - Dispatching started for transformation [sem_domain_pv_rate]
+INFO  06-03 04:25:51,736 - sem_domain_pv - Finished reading query, closing connection.
+INFO  06-03 04:25:51,737 - sem_domain_pv - Finished processing (I=77, O=0, R=0, W=77, U=0, E=0)
+INFO  06-03 04:25:51,739 - 字段选择 - Finished processing (I=0, O=0, R=77, W=77, U=0, E=0)
+INFO  06-03 04:25:51,751 - Microsoft Excel Writer - Finished processing (I=0, O=78, R=77, W=77, U=0, E=0)
+INFO  06-03 04:25:51,753 - sem_seo_evaluate - Starting entry [Mail]
+INFO  06-03 04:25:51,757 - Mail - Added file '///opt/pentaho/etl/sem_seo_evaluate1/keyword_seo_sem_pv_rate2.xls_20150306.xls' to the mail message.
+INFO  06-03 04:25:51,757 - Mail - Added file '///opt/pentaho/etl/sem_seo_evaluate1/subdomain_seo_sem_pv_rate.xls_20150306.xls' to the mail message.
+INFO  06-03 04:25:53,866 - sem_seo_evaluate - Finished job entry [Mail] (result=[true])
+INFO  06-03 04:25:53,866 - sem_seo_evaluate - Finished job entry [sem_domain_pv_rate] (result=[true])
+INFO  06-03 04:25:53,866 - sem_seo_evaluate - Finished job entry [seo_domain_pv_rate] (result=[true])
+INFO  06-03 04:25:53,866 - sem_seo_evaluate - Finished job entry [domain_subdomain_pv_rate] (result=[true])
+INFO  06-03 04:25:53,867 - sem_seo_evaluate - Finished job entry [sem_pv_rate] (result=[true])
+INFO  06-03 04:25:53,867 - sem_seo_evaluate - Finished job entry [seo_pv_stat] (result=[true])
+INFO  06-03 04:25:53,867 - sem_seo_evaluate - Finished job entry [seo_sem_pv_rate] (result=[true])
+INFO  06-03 04:25:53,867 - sem_seo_evaluate - Finished job entry [sem_seo_enter_fact_decode] (result=[true])
+INFO  06-03 04:25:53,867 - sem_seo_evaluate - Finished job entry [fetch_raw_data] (result=[true])
+INFO  06-03 04:25:53,867 - sem_seo_evaluate - Finished job entry [setenv] (result=[true])
+INFO  06-03 04:25:53,873 - dispatch_main - Finished job entry [seo_sem_evaluate] (result=[true])
+INFO  06-03 04:25:53,873 - dispatch_main - Finished job entry [cleardatas_before] (result=[true])
+INFO  06-03 04:25:53,874 - dispatch_main - Finished job entry [celeardats_main_after] (result=[true])
+INFO  06-03 04:25:53,874 - dispatch_main - Finished job entry [search_quality_evaluate_main] (result=[true])
+INFO  06-03 04:25:53,874 - dispatch_main - Finished job entry [search_engine_keyword_main] (result=[true])
+INFO  06-03 04:25:53,874 - dispatch_main - Finished job entry [keyword_rank_main] (result=[true])
+INFO  06-03 04:25:53,874 - dispatch_main - Finished job entry [shop_access_dim_shop_cate_day_main] (result=[true])
+INFO  06-03 04:25:53,874 - dispatch_main - Finished job entry [en_pv_uv_total] (result=[true])
+INFO  06-03 04:25:53,874 - dispatch_main - Finished job entry [pv_uv_total] (result=[true])
+INFO  06-03 04:25:53,874 - dispatch_main - Finished job entry [shop_access_statistic_one_day] (result=[true])
+INFO  06-03 04:25:53,874 - dispatch_main - Finished job entry [hot_industry_rank_main] (result=[true])
+INFO  06-03 04:25:53,875 - dispatch_main - Finished job entry [foreign_domain_statistic] (result=[true])
+INFO  06-03 04:25:53,875 - dispatch_main - Finished job entry [set envs] (result=[true])
+INFO  06-03 04:25:53,875 - dispatch_main - Job execution finished
+INFO  06-03 04:25:53,876 - Kitchen - Finished!
+INFO  06-03 04:25:53,876 - Kitchen - Start=2015/03/06 04:06:50.584, Stop=2015/03/06 04:25:53.876
+INFO  06-03 04:25:53,876 - Kitchen - Processing ended after 19 minutes and 3 seconds (1143 seconds total).
+INFO  06-03 04:26:10,903 - Kitchen - Start of run.
+INFO  06-03 04:26:11,058 - seller_buyer_both - Start of job execution
+INFO  06-03 04:26:11,062 - seller_buyer_both - Starting entry [setenv]
+INFO  06-03 04:26:11,065 - setenv - Loading transformation from XML file [file:///opt/pentaho/etl/seller_buyer_both/setenv1.ktr]
+INFO  06-03 04:26:11,254 - setenv1 - Dispatching started for transformation [setenv1]
+INFO  06-03 04:26:12,085 - Table input - Finished reading query, closing connection.
+INFO  06-03 04:26:12,086 - Set Variables - Setting environment variables...
+INFO  06-03 04:26:12,087 - Set Variables - Set variable YESTERDAY_STR to value [20150305]
+INFO  06-03 04:26:12,087 - Table input - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+INFO  06-03 04:26:12,087 - Set Variables - Set variable DAY_STR to value [20150306]
+INFO  06-03 04:26:12,089 - Set Variables - Finished after 1 rows.
+INFO  06-03 04:26:12,089 - Set Variables - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+INFO  06-03 04:26:12,091 - seller_buyer_both - Starting entry [deal_datas]
+INFO  06-03 04:26:12,092 - deal_datas - Loading transformation from XML file [file:///opt/pentaho/etl/seller_buyer_both/deal_data.ktr]
+INFO  06-03 04:26:12,128 - fetch_raw_data - Dispatching started for transformation [fetch_raw_data]
+INFO  06-03 04:26:19,681 - Execute SQL script - Finished reading query, closing connection.
+INFO  06-03 04:26:19,681 - Execute SQL script - Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+INFO  06-03 04:26:19,683 - seller_buyer_both - Starting entry [excel_generate]
+INFO  06-03 04:26:19,684 - excel_generate - Loading transformation from XML file [file:///opt/pentaho/etl/seller_buyer_both/export_excel.ktr]
+INFO  06-03 04:26:19,744 - export_excel - Dispatching started for transformation [export_excel]
+INFO  06-03 04:26:20,541 - work_domain_redirect2error - Finished reading query, closing connection.
+INFO  06-03 04:26:20,542 - work_domain_redirect2error - Finished processing (I=1263, O=0, R=0, W=1263, U=0, E=0)
+INFO  06-03 04:26:21,113 - Select values 3 - Finished processing (I=0, O=0, R=1263, W=1263, U=0, E=0)
+INFO  06-03 04:26:21,113 - 数据库查询 2 - Finished processing (I=264, O=0, R=1263, W=1263, U=0, E=0)
+INFO  06-03 04:26:21,285 - Microsoft Excel Output 2 2 - Finished processing (I=0, O=1263, R=1263, W=1263, U=0, E=0)
+INFO  06-03 04:26:21,288 - seller_buyer_both - Starting entry [Mail]
+INFO  06-03 04:26:21,341 - Mail - Added file '///opt/pentaho/etl/seller_buyer_both/both_buyer_seller.xls' to the mail message.
+INFO  06-03 04:26:22,412 - seller_buyer_both - Finished job entry [Mail] (result=[true])
+INFO  06-03 04:26:22,413 - seller_buyer_both - Finished job entry [excel_generate] (result=[true])
+INFO  06-03 04:26:22,413 - seller_buyer_both - Finished job entry [deal_datas] (result=[true])
+INFO  06-03 04:26:22,413 - seller_buyer_both - Finished job entry [setenv] (result=[true])
+INFO  06-03 04:26:22,413 - seller_buyer_both - Job execution finished
+INFO  06-03 04:26:22,414 - Kitchen - Finished!
+INFO  06-03 04:26:22,415 - Kitchen - Start=2015/03/06 04:26:10.905, Stop=2015/03/06 04:26:22.414
+INFO  06-03 04:26:22,415 - Kitchen - Processing ended after 11 seconds.
+20150307
+date_str20150307
+get_str :http://10.6.2.115:81/access1-20150307.log.gz
+get_str :http://10.6.2.16:81/access1-20150307.log.gz
+get_wap :ftp://10.6.2.72/pub/logs/access_log_20150306.log.1.gz
+get_work :http://10.6.2.121:82/access1-20150307.log.gz
+Java HotSpot(TM) 64-Bit Server VM warning: Insufficient space for shared memory file:
+   /tmp/hsperfdata_root/29150
+Try using the -Djava.io.tmpdir= option to select an alternate temp location.
+
+beforeLoad
+separator:/
+afterLoad
+com.yiwugou.analysis.log.nginx.controller.MainDispatcher.doPareseAndETL(MainDispatcher.java:27) - doPareseAndETL20141018
+doPareseAndETL
+beforeLoad
+separator:/
+afterLoad
+com.yiwugou.analysis.log.nginx.bo.NginxLogParser.parseAllFiles(NginxLogParser.java:135) - doPareseAndETL2014_08_18
+Java HotSpot(TM) 64-Bit Server VM warning: Insufficient space for shared memory file:
+   /tmp/hsperfdata_root/12523
+Try using the -Djava.io.tmpdir= option to select an alternate temp location.
+
+INFO  07-03 03:20:27,713 - Kitchen - Start of run.
+INFO  07-03 03:20:27,893 - exclude_umman_visit_by_ip_main - Start of job execution
+INFO  07-03 03:20:27,897 - exclude_umman_visit_by_ip_main - Starting entry [Transformation]
+INFO  07-03 03:20:27,900 - Transformation - Loading transformation from XML file [file:///opt/pentaho/etl/exclude_unman_visit_by_ip/setenv1.ktr]
+INFO  07-03 03:20:28,092 - setenv1 - Dispatching started for transformation [setenv1]
+INFO  07-03 03:20:28,991 - Table input - Finished reading query, closing connection.
+INFO  07-03 03:20:28,992 - Set Variables - Setting environment variables...
+INFO  07-03 03:20:28,993 - Set Variables - Set variable YESTERDAY_STR to value [20150306]
+INFO  07-03 03:20:28,993 - Set Variables - Set variable DAY_STR to value [20150307]
+INFO  07-03 03:20:28,993 - Table input - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+INFO  07-03 03:20:28,995 - Set Variables - Finished after 1 rows.
+INFO  07-03 03:20:28,995 - Set Variables - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+INFO  07-03 03:20:28,998 - exclude_umman_visit_by_ip_main - Starting entry [exclude_umman_visit_by_ip]
+INFO  07-03 03:20:28,999 - exclude_umman_visit_by_ip - Loading transformation from XML file [file:///opt/pentaho/etl/exclude_unman_visit_by_ip/exclude_umman_visit_by_ip.ktr]
+INFO  07-03 03:20:29,032 - exclude_umman_visit_by_ip - Dispatching started for transformation [exclude_umman_visit_by_ip]
+INFO  07-03 03:27:46,553 - Execute SQL script - Finished reading query, closin
