@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>ipo_data</name>
+    <name>hs300_day_k</name>
     <description/>
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
     <directory>&#47;</directory>
     <parameters>
     </parameters>
@@ -61,9 +62,9 @@
     <clusterschemas>
     </clusterschemas>
   <created_user>-</created_user>
-  <created_date>2015&#47;04&#47;06 13:54:43.375</created_date>
+  <created_date>2015&#47;04&#47;26 19:02:45.000</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2015&#47;04&#47;06 13:54:43.375</modified_date>
+  <modified_date>2015&#47;04&#47;26 19:02:45.000</modified_date>
   </info>
   <notepads>
   </notepads>
@@ -120,7 +121,7 @@
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>C:\Documents and Settings\jyl\git\kettlejobs\sse\综合数据分析（天）\证监会核准.xlsx</name>
+      <name>E:\stock\SZ399300.xlsx</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -128,8 +129,8 @@
     </file>
     <fields>
       <field>
-        <name>时间</name>
-        <type>String</type>
+        <name>      日期</name>
+        <type>Date</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -140,8 +141,8 @@
         <group/>
       </field>
       <field>
-        <name>审核通过家数</name>
-        <type>Integer</type>
+        <name>	    开盘</name>
+        <type>Number</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -152,8 +153,56 @@
         <group/>
       </field>
       <field>
-        <name>计划募集资金数</name>
-        <type>String</type>
+        <name>	    最高	</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>    最低	</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>    收盘</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>	    成交量	</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>    成交额</name>
+        <type>Number</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -166,13 +215,13 @@
     </fields>
     <sheets>
       <sheet>
-        <name>证监会核准</name>
+        <name>SZ399300</name>
         <startrow>0</startrow>
         <startcol>0</startcol>
         </sheet>
     </sheets>
     <strict_types>N</strict_types>
-    <error_ignored>N</error_ignored>
+    <error_ignored>Y</error_ignored>
     <error_line_skipped>N</error_line_skipped>
     <bad_line_files_destination_directory/>
     <bad_line_files_extension>warning</bad_line_files_extension>
@@ -191,8 +240,8 @@
     <spreadsheet_type>POI</spreadsheet_type>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>128</xloc>
-      <yloc>117</yloc>
+      <xloc>357</xloc>
+      <yloc>150</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -207,19 +256,39 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <fields>      <field>        <name>时间</name>
-        <rename>audit_date</rename>
+    <fields>      <field>        <name>      日期</name>
+        <rename>exchange_date</rename>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>审核通过家数</name>
-        <rename>audit_company_num</rename>
+      </field>      <field>        <name>	    开盘</name>
+        <rename>price_open</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>	    最高	</name>
+        <rename>price_high</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>    最低	</name>
+        <rename>price_low</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>    收盘</name>
+        <rename>price_close</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>	    成交量	</name>
+        <rename>volumn</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>    成交额</name>
+        <rename>amount</rename>
         <length>-2</length>
         <precision>-2</precision>
       </field>        <select_unspecified>N</select_unspecified>
     </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>261</xloc>
-      <yloc>122</yloc>
+      <xloc>481</xloc>
+      <yloc>162</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -235,10 +304,10 @@
            <schema_name/>
            </partitioning>
     <connection>sse</connection>
-    <schema>sse</schema>
-    <table>day_data_ipo_hezhun</table>
+    <schema/>
+    <table>hs_300_daily_exchange_info</table>
     <commit>1000</commit>
-    <truncate>Y</truncate>
+    <truncate>N</truncate>
     <ignore_errors>N</ignore_errors>
     <use_batch>Y</use_batch>
     <specify_fields>N</specify_fields>
@@ -252,11 +321,35 @@
     <return_keys>N</return_keys>
     <return_field/>
     <fields>
+        <field>
+          <column_name>day_time</column_name>
+          <stream_name>day_time</stream_name>
+        </field>
+        <field>
+          <column_name>price_open</column_name>
+          <stream_name>price_open</stream_name>
+        </field>
+        <field>
+          <column_name>price_high</column_name>
+          <stream_name>price_high</stream_name>
+        </field>
+        <field>
+          <column_name>price_low</column_name>
+          <stream_name>price_low</stream_name>
+        </field>
+        <field>
+          <column_name>price_close</column_name>
+          <stream_name>price_close</stream_name>
+        </field>
+        <field>
+          <column_name>volumn</column_name>
+          <stream_name>volumn</stream_name>
+        </field>
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>392</xloc>
-      <yloc>161</yloc>
+      <xloc>566</xloc>
+      <yloc>190</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
