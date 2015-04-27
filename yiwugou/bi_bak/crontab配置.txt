@@ -1,0 +1,8 @@
+JAVA_HOME=/home/yiwu/jdk1.7
+CLASSPATH=.:/home/yiwu/jdk1.7:/opt/nginx/MainDispatcher.jar:/home/yiwu/jdk1.7/jre/lib/ext/ojdbc6-11.2.0.4.jar:/opt/pentaho/data-integration/lib:/opt/pentaho/data-integration/libext:/home/yiwu/jdk1.7/jre/lib/ext/mysql-connector-java-5.1.16-bin.jar 
+50 00 * * *  /opt/nginx/shell/ftp.sh >>/tmp/crontab_info
+10 00 * * 1 /opt/nginx/shell/oracle_rebuild.sh  >>/tmp/crontab_info
+10 06 * * 1 /opt/nginx/shell/search_quality_evaluate.sh  >>/tmp/crontab_info
+#30 05 * * *  /opt/nginx/shell/oracele_mysql.sh>>/tmp/crontab_info1
+#43 15 * * *  /opt/nginx/shell/ftp.sh >>/tmp/crontab_info
+#20 00 * * *  /usr/sbin/logrotate -f /etc/logrotate.d/nginx
