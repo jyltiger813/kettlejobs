@@ -120,7 +120,7 @@
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>C:\Documents and Settings\jyl\git\kettlejobs\sse\综合数据分析（天）\证监会核准.xlsx</name>
+      <name>C:\Documents and Settings\jyl\git\kettlejobs\sse\综合数据分析（天）\2014新股.xlsx</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -128,19 +128,7 @@
     </file>
     <fields>
       <field>
-        <name>时间</name>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>审核通过家数</name>
+        <name>证券代码</name>
         <type>Integer</type>
         <length>-1</length>
         <precision>-1</precision>
@@ -152,7 +140,175 @@
         <group/>
       </field>
       <field>
-        <name>计划募集资金数</name>
+        <name>申购代码</name>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>证券简称</name>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>上网发行</name>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>上市日期</name>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>发行数量</name>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>上网发行数量</name>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>发行价格(元)</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>市盈率</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>个人申购上限</name>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>募集资金</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>网上中签率</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>中签号</name>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>预测</name>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>公告</name>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>网上公布招股意向书时间</name>
         <type>String</type>
         <length>-1</length>
         <precision>-1</precision>
@@ -166,13 +322,13 @@
     </fields>
     <sheets>
       <sheet>
-        <name>证监会核准</name>
+        <name>Sheet1</name>
         <startrow>0</startrow>
         <startcol>0</startcol>
         </sheet>
     </sheets>
     <strict_types>N</strict_types>
-    <error_ignored>N</error_ignored>
+    <error_ignored>Y</error_ignored>
     <error_line_skipped>N</error_line_skipped>
     <bad_line_files_destination_directory/>
     <bad_line_files_extension>warning</bad_line_files_extension>
@@ -207,12 +363,68 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <fields>      <field>        <name>时间</name>
-        <rename>audit_date</rename>
+    <fields>      <field>        <name>证券代码</name>
+        <rename>stock_code</rename>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>审核通过家数</name>
-        <rename>audit_company_num</rename>
+      </field>      <field>        <name>申购代码</name>
+        <rename>apply_code</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>证券简称</name>
+        <rename>stock_name</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>上网发行</name>
+        <rename>apply_day</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>上市日期</name>
+        <rename>ipo_day</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>发行数量</name>
+        <rename>ipo_num</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>上网发行数量</name>
+        <rename>net_ipo_num</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>发行价格(元)</name>
+        <rename>ipo_price</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>市盈率</name>
+        <rename>revenge_ratio</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>个人申购上限</name>
+        <rename>personal_apply_limit</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>募集资金</name>
+        <rename>ipo_amount</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>网上中签率</name>
+        <rename>net_apply_success_ratio</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>中签号</name>
+        <rename>apply_success_num</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>预测</name>
+        <rename>predict</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>公告</name>
+        <rename>report</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>网上公布招股意向书时间</name>
+        <rename>recruit_report_publish_time</rename>
         <length>-2</length>
         <precision>-2</precision>
       </field>        <select_unspecified>N</select_unspecified>
@@ -236,7 +448,7 @@
            </partitioning>
     <connection>sse</connection>
     <schema>sse</schema>
-    <table>day_data_ipo_hezhun</table>
+    <table>day_data_ipo_detail</table>
     <commit>1000</commit>
     <truncate>Y</truncate>
     <ignore_errors>N</ignore_errors>
