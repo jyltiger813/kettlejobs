@@ -1,0 +1,21 @@
+commit可以单个文件,push操作必须整个工程同时push
+
+luna4.4 github使用  
+
+打开Git Repositories
+新建git仓库
+
+
+GitHub客户端安装使用
+下载msysgit
+http://msysgit.github.io/
+GIT官网下载安装客户端工具
+http://git-scm.com/downloads/guis
+
+push之前必须先pull 
+
+
+git切换本地磁盘目录
+1.eclipse中更改git默认目录    preference 修改默认目录
+2.删除eclipse中的项目
+3.重新导入（按git已存在项目方式导入）
