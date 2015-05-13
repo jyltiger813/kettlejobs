@@ -1,0 +1,7 @@
+应用上下文 
+应用上下文提供更多的功能，包括资源获取、国际化,事件处理等等。对于有单例要求的实例，在加载的时候就已经实例化。
+org.springframework.context.support.ClassPathXmlApplicationContext
+ApplicationContext实现，它可以依据Classpath查找配置文件
+ApplicationContext ctx  = new ClassPathXmlApplicationContext(配置文件的CLASSPATH路径)
+		其它实现：XmlWebApplicationContext，FileSystemXmlApplicationContext 
+不好意思没时间说的更详细了，其实都是一样的，最终都是如何获得“应用上下文”。
