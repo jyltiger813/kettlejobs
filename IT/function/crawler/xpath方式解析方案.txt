@@ -1,0 +1,4 @@
+-- 数据抓取  firebug + xpath checker
+-- java htmlunit
+-- kettle数据直接导入数据库，如果出异常重新抓取
+-- mysql xpath方式解析数据入库
