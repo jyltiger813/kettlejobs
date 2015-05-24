@@ -1,0 +1,3 @@
+jdbc写入数据出现乱码，被注释掉的这行会出现乱码
+ //String url = "jdbc:mysql://localhost:3306/sse?useUnicode=true&amp;characterEncoding=UTF8";
+String url = "jdbc:mysql://localhost:3306/sse?useUnicode=true&characterEncoding=UTF8";

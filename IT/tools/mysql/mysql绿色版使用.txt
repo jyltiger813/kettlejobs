@@ -1,0 +1,5 @@
+初始化设置密码
+
+启动mysql 命令行下执行mysqld
+
+mysqladmin -u root -p password 3131624
