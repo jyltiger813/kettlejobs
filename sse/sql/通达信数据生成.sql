@@ -56,6 +56,16 @@ GROUP BY DATE_FORMAT(ipo_day,'%Y%m%d')
  ORDER BY DATE_FORMAT(ipo_day,'%Y%m%d')
 
 
+-- 生成shibo数据
+SELECT * FROM shibo_data
+
+SELECT CONCAT('1|999999|',DATE_FORMAT(statis_day,'%Y%m%d'),'|',
+one_night_rate) FROM shibo_data
+ ORDER BY statis_day
+
 -- ipo 明细数据
 
 SELECT * FROM day_data_ipo_detail ORDER BY apply_day DESC 
+
+-- 
+SELECT * FROM shibo_data
