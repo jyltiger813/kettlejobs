@@ -332,6 +332,7 @@ CREATE TABLE `day_data_ipo_detail` (
 -- Dumping data for table `day_data_ipo_detail`
 --
 
+
 INSERT INTO sse.`day_data_ipo_detail` VALUES ('300473','300473','德尔股份 ','2015-06-03 00:00:00',NULL,2500,NULL,0,0,0,7.19,0,NULL,NULL,NULL,NULL);
 INSERT INTO `day_data_ipo_detail` VALUES ('2766','2766','索菱股份 ','2015-06-03 00:00:00',NULL,4580,NULL,0,0,0,3.449,0,NULL,NULL,NULL,NULL);
 INSERT INTO `day_data_ipo_detail` VALUES ('300476','300476','胜宏科技 ','2015-06-03 00:00:00',NULL,NULL,NULL,0,0,0,5.768,0,NULL,NULL,NULL,NULL);
