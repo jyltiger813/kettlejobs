@@ -2,4 +2,4 @@
 
 启动mysql 命令行下执行mysqld
 
-mysqladmin -u root -p password 3131624
+mysqladmin -u root -p password manager
