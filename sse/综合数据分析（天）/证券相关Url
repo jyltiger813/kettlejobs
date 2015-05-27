@@ -41,8 +41,15 @@ http://stock.jrj.com.cn/xwk/201504/20150425_1.shtml
 -- 手动收集数据来源，华尔街头条信息
 http://wallstreetcn.com/news?status=published&type=news&cid=6&order=-created_at&limit=30&page=5hvnfhn
 
-链接  金融界 报刊头条
+-- 华尔街头条
+http://wallstreetcn.com/news?cid=6
+
+-- 华尔街头条数据的实时性更好些
+http://wallstreetcn.com/news?status=published&type=news&cid=6&order=-created_at&limit=30&page=65
+
+链接  金融界 报刊头条（敏感消息时效性比较差，做空的消息）
 http://stock.jrj.com.cn/list/stockbktt.shtml
+
 
 国务院文件
 http://www.gov.cn/zhengce/xxgkzl.htm
@@ -51,3 +58,14 @@ http://www.gov.cn/zhengce/xxgkzl.htm
 
 site:www.gov.cn   "国务院批转发展改革委关于2015年深化经济体制改革重点工作意见的通知"
 该通知自李克强上任以来每年都会发
+
+-- 定向增发的数据
+
+http://stock.hexun.com/zfsj/
+
+
+-- 人民币对美元汇率，这个数据影响应该也是比较大的
+http://data.bank.hexun.com/ll/rmbhl.aspx?page=1
+
+-- 海阳的博客
+http://blog.sina.com.cn/u/5206858139
