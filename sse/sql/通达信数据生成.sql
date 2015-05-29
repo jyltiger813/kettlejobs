@@ -29,6 +29,9 @@ SELECT @rownum:=@rownum+1 rownum, trade_date,loan_monny_margin FROM
 (SELECT @rownum:=0,trade_date,loan_monny_margin 
 FROM loan_monny_loan_stock_detail_sum  t2 WHERE t2.stock_code = '999999' ORDER BY trade_date ) t)t2
 WHERE t2.rownum = t1.rownum+1
+order by t1.trade_date desc 
+
+select * from loan_monny_loan_stock_detail_sum order by trade_date desc
 
 -- 导出数据  换行符号为\r\n
 
