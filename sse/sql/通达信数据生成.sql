@@ -47,16 +47,24 @@ SELECT * FROM day_data_ipo_hezhun
 
 -- 生成申购数据
 
-SELECT CONCAT('1|999999|',DATE_FORMAT(apply_day,'%Y%m%d'),'|',
-COUNT(1)) FROM day_data_ipo_detail
-GROUP BY DATE_FORMAT(apply_day,'%Y%m%d')
- ORDER BY DATE_FORMAT(apply_day,'%Y%m%d')
+
+
+SELECT CONCAT('1|999999|',day_str,'|',num )from (
+select COUNT(1) num,DATE_FORMAT(apply_day,'%Y%m%d') day_str
+ from day_data_ipo_detail
+ GROUP BY DATE_FORMAT(apply_day,'%Y%m%d'))t
+ 
+ 
+ order by apply_day desc
 
 -- 生成网上发行日数据
-SELECT CONCAT('1|999999|',DATE_FORMAT(ipo_day,'%Y%m%d'),'|',
-COUNT(1)) FROM day_data_ipo_detail
+
+
+SELECT CONCAT('1|999999|',day_str,'|',num )from (
+select COUNT(1) num,DATE_FORMAT(ipo_day,'%Y%m%d') day_str
+ FROM day_data_ipo_detail
 GROUP BY DATE_FORMAT(ipo_day,'%Y%m%d')
- ORDER BY DATE_FORMAT(ipo_day,'%Y%m%d')
+ ORDER BY DATE_FORMAT(ipo_day,'%Y%m%d'))t
 
 
 -- 生成shibo数据
