@@ -15,6 +15,17 @@ AND TIMESTAMPDIFF(DAY,t1.trade_date ,t2.trade_date )= 1;
 0|999999|19900101|12.000
 0|999999|20150506|23.000
 
+drop table shibo_data
+
+select * from shibo_data order by statistic_day desc 
+
+-- shibor一年利率变化率
+
+
+-- shibor隔夜利率变化率
+
+
+
 -- 生成融资余额的通达信自定义数据
 
 
@@ -62,7 +73,7 @@ select COUNT(1) num,DATE_FORMAT(apply_day,'%Y%m%d') day_str
 
 SELECT CONCAT('1|999999|',day_str,'|',num )from (
 select COUNT(1) num,DATE_FORMAT(ipo_day,'%Y%m%d') day_str
- FROM day_data_ipo_detail
+ FROM day_data_ipo_detail where ipo_day is not null 
 GROUP BY DATE_FORMAT(ipo_day,'%Y%m%d')
  ORDER BY DATE_FORMAT(ipo_day,'%Y%m%d'))t
 
