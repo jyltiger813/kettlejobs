@@ -53,8 +53,50 @@ select * from loan_monny_loan_stock_detail_sum order by trade_date desc
 SELECT CONCAT('1|999999|',DATE_FORMAT(audit_date,'%Y%m%d'),'|',
 audit_company_num) FROM day_data_ipo_hezhun
  ORDER BY audit_date
+ 
+ SELECT * FROM day_data_ipo_hezhun
 
-SELECT * FROM day_data_ipo_hezhun
+ 
+ -- shibor一年期利率变化率数据
+ 
+ 
+ select * from shibo_data order by statistic_day desc  
+ 
+ 
+ SELECT CONCAT('1|999999|',DATE_FORMAT(t2.statistic_day,'%Y%m%d'),'|',
+(t2.one_year - t1.one_year )/t1.one_year *100)
+FROM(
+SELECT @rownum:=@rownum+1 rownum, statistic_day,one_year FROM
+(SELECT @rownum:=0,statistic_day,one_year 
+FROM shibo_data  t2 ORDER BY statistic_day ) t)t1,
+(
+SELECT @rownum:=@rownum+1 rownum, statistic_day,one_year FROM
+(SELECT @rownum:=0,statistic_day,one_year 
+FROM shibo_data  t2  ORDER BY statistic_day ) t)t2
+WHERE t2.rownum = t1.rownum+1
+order by t1.statistic_day desc 
+
+
+-- shibor一天期利率变化率数据
+ 
+ 
+ select * from shibo_data order by statistic_day desc  
+ 
+ 
+ SELECT CONCAT('1|999999|',DATE_FORMAT(t2.statistic_day,'%Y%m%d'),'|',
+(t2.one_day - t1.one_day )/t1.one_day *100)
+FROM(
+SELECT @rownum:=@rownum+1 rownum, statistic_day,one_day FROM
+(SELECT @rownum:=0,statistic_day,one_day 
+FROM shibo_data  t2 ORDER BY statistic_day ) t)t1,
+(
+SELECT @rownum:=@rownum+1 rownum, statistic_day,one_day FROM
+(SELECT @rownum:=0,statistic_day,one_day 
+FROM shibo_data  t2  ORDER BY statistic_day ) t)t2
+WHERE t2.rownum = t1.rownum+1
+order by t1.statistic_day desc 
+
+
 
 -- 生成申购数据
 
