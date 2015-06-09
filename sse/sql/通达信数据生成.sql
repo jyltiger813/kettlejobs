@@ -28,6 +28,7 @@ select * from shibo_data order by statistic_day desc
 
 -- 生成融资余额的通达信自定义数据
 
+-- 融资余额变化率
 
 SELECT CONCAT('1|999999|',DATE_FORMAT(t2.trade_date,'%Y%m%d'),'|',
 (t2.loan_monny_margin - t1.loan_monny_margin )/t1.loan_monny_margin *100)
@@ -42,6 +43,16 @@ FROM loan_monny_loan_stock_detail_sum  t2 WHERE t2.stock_code = '999999' ORDER B
 WHERE t2.rownum = t1.rownum+1
 order by t1.trade_date desc 
 
+
+-- 融资余额数 当日融资买入与融资余额比
+
+-- 融资买入与当日上证成交金额比
+
+-- 本日融资余额(元)	
+
+select * from loan_monny_loan_stock_detail_sum order by trade_date desc 
+
+-- 本日融资买入额(元)
 select * from loan_monny_loan_stock_detail_sum order by trade_date desc
 
 -- 导出数据  换行符号为\r\n
