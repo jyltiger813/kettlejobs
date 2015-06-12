@@ -63,9 +63,9 @@ select * from loan_monny_loan_stock_detail_sum order by trade_date desc
 
 SELECT CONCAT('1|999999|',DATE_FORMAT(audit_date,'%Y%m%d'),'|',
 audit_company_num) FROM day_data_ipo_hezhun
- ORDER BY audit_date
+ ORDER BY audit_date desc
  
- SELECT * FROM day_data_ipo_hezhun
+ SELECT * FROM day_data_ipo_hezhun order by audit_date desc
 
  
  -- shibor一年期利率变化率数据
@@ -129,6 +129,8 @@ select COUNT(1) num,DATE_FORMAT(ipo_day,'%Y%m%d') day_str
  FROM day_data_ipo_detail where ipo_day is not null 
 GROUP BY DATE_FORMAT(ipo_day,'%Y%m%d')
  ORDER BY DATE_FORMAT(ipo_day,'%Y%m%d'))t
+ 
+ select * from day_data_ipo_detail order by ipo_day desc 
 
 
 -- 生成shibo数据
