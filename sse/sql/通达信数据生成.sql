@@ -1,3 +1,47 @@
+-- 股票增发按上市日汇总
+
+SELECT CONCAT('1|999999|',day_str,'|',num )from (
+select sum(collect_money) num,date_format(DATE_ADD(publish_date,INTERVAL 1 year),'%Y%m%d') day_str
+ from increment_ipo_detail 
+where publish_style <> '吸收合并'
+group by day_str)t
+order by num desc
+
+
+DATE_ADD("1997-12-31 23:59:59",INTERVAL 1 DAY); 
+-- 通达信_增发发行日
+
+SELECT CONCAT('1|999999|',day_str,'|',num )from (
+select sum(collect_money) num,date_format(publish_date,'%Y%m%d') day_str
+ from increment_ipo_detail 
+where publish_style <> '吸收合并'
+group by day_str)t
+order by day_str
+
+-- 通达信_增发解冻日
+
+SELECT CONCAT('1|999999|',day_str,'|',num )from (
+select sum(collect_money) num,date_format(publish_date,'%Y%m%d') day_str
+ from increment_ipo_detail 
+where publish_style <> '吸收合并'
+group by day_str)t
+order by day_str
+
+
+
+group by date_str
+order by date_str desc 
+
+
+select * from increment_ipo_detail
+-- where  publish_style = '吸收合并'
+order by
+seq_num
+-- publish_date desc
+
+
+truncate table increment_ipo_detail
+
 -- 通达信数据生成
 
 SELECT t1.stock_code,t1.stock_name,t1.trade_date,t1.loan_monny_margin,

@@ -131,6 +131,42 @@ order by t1.statistic_day desc </sql>
     </step>
 
   <step>
+    <name>shibor_data 2</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>sse</connection>
+    <sql> SELECT CONCAT(&apos;1|999999|&apos;,DATE_FORMAT(t2.statistic_day,&apos;%Y%m%d&apos;),&apos;|&apos;,
+(t2.one_day - t1.one_day )&#47;t1.one_day *100)
+FROM(
+SELECT @rownum:=@rownum+1 rownum, statistic_day,one_day FROM
+(SELECT @rownum:=0,statistic_day,one_day 
+FROM shibo_data  t2 ORDER BY statistic_day ) t)t1,
+(
+SELECT @rownum:=@rownum+1 rownum, statistic_day,one_day FROM
+(SELECT @rownum:=0,statistic_day,one_day 
+FROM shibo_data  t2  ORDER BY statistic_day ) t)t2
+WHERE t2.rownum = t1.rownum+1
+order by t1.statistic_day desc </sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>525</xloc>
+      <yloc>219</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
     <name>文本文件输出</name>
     <type>TextFileOutput</type>
     <description/>
@@ -190,42 +226,6 @@ order by t1.statistic_day desc </sql>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>588</xloc>
       <yloc>371</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>shibor_data 2</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>sse</connection>
-    <sql> SELECT CONCAT(&apos;1|999999|&apos;,DATE_FORMAT(t2.statistic_day,&apos;%Y%m%d&apos;),&apos;|&apos;,
-(t2.one_day - t1.one_day )&#47;t1.one_day *100)
-FROM(
-SELECT @rownum:=@rownum+1 rownum, statistic_day,one_day FROM
-(SELECT @rownum:=0,statistic_day,one_day 
-FROM shibo_data  t2 ORDER BY statistic_day ) t)t1,
-(
-SELECT @rownum:=@rownum+1 rownum, statistic_day,one_day FROM
-(SELECT @rownum:=0,statistic_day,one_day 
-FROM shibo_data  t2  ORDER BY statistic_day ) t)t2
-WHERE t2.rownum = t1.rownum+1
-order by t1.statistic_day desc </sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>525</xloc>
-      <yloc>219</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
