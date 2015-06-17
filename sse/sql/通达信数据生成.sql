@@ -27,6 +27,11 @@ where publish_style <> '吸收合并'
 group by day_str)t
 order by day_str
 
+-- 网上增发
+
+select * 
+ from increment_ipo_detail 
+where publish_style like '%网上%'
 
 
 group by date_str
