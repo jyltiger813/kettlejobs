@@ -17,21 +17,22 @@ import jyl.util.time.DateTimeUtil;
 public class SinaStockDataFetcher {
 
 	URL url = null;
-	String urlStr = "http://hq.sinajs.cn/list=sh000001,sh601857";
+	String urlStr = "http://hq.sinajs.cn/list=sh000001,sh000016,CFF_RE_IH1507";
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 //http://hq.sinajs.cn/list=sh000016,sh601857
 		//MainDispatcher
 		SinaStockDataFetcher fetcher = new SinaStockDataFetcher();
 		try {
-			fetcher.getDatas();
+			CompareBean resultBean =	fetcher.getDatas();
+			System.out.println("bean:"+resultBean);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
-	private TreeMap<String,String> getDatas() throws IOException {
+	private CompareBean getDatas() throws IOException {
 		// TODO Auto-generated method stub
 	
 		if(url==null)
@@ -72,10 +73,10 @@ public class SinaStockDataFetcher {
 	
 	}
 
-	private TreeMap<String,String> parseAndSaveDatas(String string) {
+	private CompareBean parseAndSaveDatas(String string) {
 		// TODO Auto-generated method stub
-		TreeMap<String,String>  set = new TreeMap<String,String>();
 		String [] trades = string.split(";");
+		CompareBean bean = new CompareBean();
 		if(trades.length>1)
 		{
 			
@@ -90,7 +91,47 @@ var hq_str_sh601857="中国石油,12.96,12.98,12.76,12.98,12.71,12.76,12.77,1032
 			String [] tradePro = strs[1].split(",");
 			 if(tradePro.length<9)
 				 return null;//无数据跳过该次循环
-			  float currentPrice50= Float.parseFloat(tradePro[3]);
+			 //处理时间  
+			 	String timeStr = tradePro[30]+" "+ tradePro[31];
+				
+				System.out.println("timeStr:"+timeStr);
+			 float currentPriceSZ = Float.parseFloat(tradePro[3]);
+			 bean.setCurrentPriceSZ(currentPriceSZ);
+			 Long amountSZ= Long.parseLong(tradePro[9]);
+			 bean.setCurrentAmountSZ(amountSZ);
+			 System.out.println("currentPriceSZ:"+currentPriceSZ);
+			
+			 //处理上证50
+			  String []strs1 = trades[1].split("=");
+			 
+				String [] tradePro1 = strs1[1].split(",");
+				 if(tradePro1.length<9)
+					 return null;//无数据跳过该次循环
+				  float currentPrice50= Float.parseFloat(tradePro1[3]);
+				  System.out.println("currentPrice50:"+currentPrice50);
+				  String StockCode1 = strs1[0].substring(strs1[0].length()-6, strs[0].length());
+					System.out.println("StockCode:"+StockCode1);
+					 Long amount50= Long.parseLong(tradePro1[9]);
+					 bean.setCurrentAmount50(amount50);
+					  bean.setCurrentPrice50(currentPrice50);
+				  //处理上证50期指
+					 String []strs2 = trades[2].split("=");
+						String StockCode2 = strs2[0].substring(strs2[0].length()-6, strs[0].length());
+						System.out.println("StockCode2:"+StockCode2);
+						String [] tradePro2 = strs2[1].split(",");
+						 if(tradePro1.length<9)
+							 return null;//无数据跳过该次循环
+						 
+						  float currentPrice50F= Float.parseFloat(tradePro2[3]);
+						  bean.setCurrentPrice50F(currentPrice50F);
+						  System.out.println("currentPrice50:"+currentPrice50F);
+					  //13：1371608，持仓量
+						//  14：1611074，成交量
+						//  Long volumn50F= Long.parseLong(tradePro2[14]);
+						//  Long volumn50FHod= Long.parseLong(tradePro2[13]);
+							/* bean.setCurrentAmount50F(volumn50F);
+							 bean.setCurrentVol50FHold(volumn50FHod);*/
+				  
 			  /*float BeginToday= Float.parseFloat(tradePro[1]);
 			  float ClosedYes = Float.parseFloat(tradePro[2]);
 			  float CloseToday= Float.parseFloat(tradePro[3]);
@@ -100,7 +141,7 @@ var hq_str_sh601857="中国石油,12.96,12.98,12.76,12.98,12.71,12.76,12.77,1032
 			  Double Amount= Double.parseDouble(tradePro[9]);
 			  String timeStr = tradePro[tradePro.length-3];
 			  Timestamp TradeDate = new Timestamp(DateTimeUtil.getCalendarByStr(timeStr).getTimeInMillis());
-		*/	  return set;	
+		*/	  return bean;	
 		}
 		else return null;
 		
