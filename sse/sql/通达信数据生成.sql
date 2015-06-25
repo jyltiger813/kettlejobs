@@ -1,51 +1,60 @@
+-- 美联储会议时间  fr_meeting
+
+-- 中国人民银行利率变化  financial_policy
+
+SELECT * FROM financial_policy
+
+
+fr_meeting
+
 -- 股票增发按上市日汇总
 
-SELECT CONCAT('1|999999|',day_str,'|',num )from (
-select sum(collect_money) num,date_format(DATE_ADD(publish_date,INTERVAL 1 year),'%Y%m%d') day_str
- from increment_ipo_detail 
-where publish_style <> '吸收合并'
-group by day_str)t
-order by num desc
+SELECT CONCAT('1|999999|',day_str,'|',num )FROM (
+SELECT SUM(collect_money) num,DATE_FORMAT(DATE_ADD(publish_date,INTERVAL 1 YEAR),'%Y%m%d') day_str
+ FROM increment_ipo_detail 
+WHERE publish_style <> '吸收合并'
+GROUP BY day_str)t
+ORDER BY num DESC
 
 
 DATE_ADD("1997-12-31 23:59:59",INTERVAL 1 DAY); 
 -- 通达信_增发发行日
 
-SELECT CONCAT('1|999999|',day_str,'|',num )from (
-select sum(collect_money) num,date_format(publish_date,'%Y%m%d') day_str
- from increment_ipo_detail 
-where publish_style <> '吸收合并'
-group by day_str)t
-order by day_str
+SELECT CONCAT('1|999999|',day_str,'|',num )FROM (
+SELECT SUM(collect_money) num,DATE_FORMAT(publish_date,'%Y%m%d') day_str
+ FROM increment_ipo_detail 
+WHERE publish_style <> '吸收合并'
+GROUP BY day_str)t
+ORDER BY day_str
 
 -- 通达信_增发解冻日
 
-SELECT CONCAT('1|999999|',day_str,'|',num )from (
-select sum(collect_money) num,date_format(publish_date,'%Y%m%d') day_str
- from increment_ipo_detail 
-where publish_style <> '吸收合并'
-group by day_str)t
-order by day_str
+SELECT CONCAT('1|999999|',day_str,'|',num )FROM (
+SELECT SUM(collect_money) num,DATE_FORMAT(publish_date,'%Y%m%d') day_str
+ FROM increment_ipo_detail 
+WHERE publish_style <> '吸收合并'
+GROUP BY day_str)t
+ORDER BY day_str
 
 -- 网上增发
 
-select * 
- from increment_ipo_detail 
-where publish_style like '%网上%'
+SELECT * 
+ FROM increment_ipo_detail 
+WHERE publish_style LIKE '%网上%'
 
 
-group by date_str
-order by date_str desc 
+GROUP BY date_str
+ORDER BY date_str DESC 
 
 
-select * from increment_ipo_detail
+SELECT * FROM increment_ipo_detail
 -- where  publish_style = '吸收合并'
-order by
+ORDER BY
 seq_num
 -- publish_date desc
 
 
-truncate table increment_ipo_detail
+TRUNCATE TABLE increment_ipo_detail
 
 -- 通达信数据生成
 
@@ -64,9 +73,9 @@ AND TIMESTAMPDIFF(DAY,t1.trade_date ,t2.trade_date )= 1;
 0|999999|19900101|12.000
 0|999999|20150506|23.000
 
-drop table shibo_data
+DROP TABLE shibo_data
 
-select * from shibo_data order by statistic_day desc 
+SELECT * FROM shibo_data ORDER BY statistic_day DESC 
 
 -- shibor一年利率变化率
 
@@ -90,7 +99,7 @@ SELECT @rownum:=@rownum+1 rownum, trade_date,loan_monny_margin FROM
 (SELECT @rownum:=0,trade_date,loan_monny_margin 
 FROM loan_monny_loan_stock_detail_sum  t2 WHERE t2.stock_code = '999999' ORDER BY trade_date ) t)t2
 WHERE t2.rownum = t1.rownum+1
-order by t1.trade_date desc 
+ORDER BY t1.trade_date DESC 
 
 
 -- 融资余额数 当日融资买入与融资余额比
@@ -99,10 +108,10 @@ order by t1.trade_date desc
 
 -- 本日融资余额(元)	
 
-select * from loan_monny_loan_stock_detail_sum order by trade_date desc 
+SELECT * FROM loan_monny_loan_stock_detail_sum ORDER BY trade_date DESC 
 
 -- 本日融资买入额(元)
-select * from loan_monny_loan_stock_detail_sum order by trade_date desc
+SELECT * FROM loan_monny_loan_stock_detail_sum ORDER BY trade_date DESC
 
 -- 导出数据  换行符号为\r\n
 
@@ -112,15 +121,15 @@ select * from loan_monny_loan_stock_detail_sum order by trade_date desc
 
 SELECT CONCAT('1|999999|',DATE_FORMAT(audit_date,'%Y%m%d'),'|',
 audit_company_num) FROM day_data_ipo_hezhun
- ORDER BY audit_date desc
+ ORDER BY audit_date DESC
  
- SELECT * FROM day_data_ipo_hezhun order by audit_date desc
+ SELECT * FROM day_data_ipo_hezhun ORDER BY audit_date DESC
 
  
  -- shibor一年期利率变化率数据
  
  
- select * from shibo_data order by statistic_day desc  
+ SELECT * FROM shibo_data ORDER BY statistic_day DESC  
  
  
  SELECT CONCAT('1|999999|',DATE_FORMAT(t2.statistic_day,'%Y%m%d'),'|',
@@ -134,13 +143,13 @@ SELECT @rownum:=@rownum+1 rownum, statistic_day,one_year FROM
 (SELECT @rownum:=0,statistic_day,one_year 
 FROM shibo_data  t2  ORDER BY statistic_day ) t)t2
 WHERE t2.rownum = t1.rownum+1
-order by t1.statistic_day desc 
+ORDER BY t1.statistic_day DESC 
 
 
 -- shibor一天期利率变化率数据
  
  
- select * from shibo_data order by statistic_day desc  
+ SELECT * FROM shibo_data ORDER BY statistic_day DESC  
  
  
  SELECT CONCAT('1|999999|',DATE_FORMAT(t2.statistic_day,'%Y%m%d'),'|',
@@ -154,7 +163,7 @@ SELECT @rownum:=@rownum+1 rownum, statistic_day,one_day FROM
 (SELECT @rownum:=0,statistic_day,one_day 
 FROM shibo_data  t2  ORDER BY statistic_day ) t)t2
 WHERE t2.rownum = t1.rownum+1
-order by t1.statistic_day desc 
+ORDER BY t1.statistic_day DESC 
 
 
 
@@ -162,24 +171,24 @@ order by t1.statistic_day desc
 
 
 
-SELECT CONCAT('1|999999|',day_str,'|',num )from (
-select COUNT(1) num,DATE_FORMAT(apply_day,'%Y%m%d') day_str
- from day_data_ipo_detail
+SELECT CONCAT('1|999999|',day_str,'|',num )FROM (
+SELECT COUNT(1) num,DATE_FORMAT(apply_day,'%Y%m%d') day_str
+ FROM day_data_ipo_detail
  GROUP BY DATE_FORMAT(apply_day,'%Y%m%d'))t
  
  
- order by apply_day desc
+ ORDER BY apply_day DESC
 
 -- 生成网上发行日数据
 
 
-SELECT CONCAT('1|999999|',day_str,'|',num )from (
-select COUNT(1) num,DATE_FORMAT(ipo_day,'%Y%m%d') day_str
- FROM day_data_ipo_detail where ipo_day is not null 
+SELECT CONCAT('1|999999|',day_str,'|',num )FROM (
+SELECT COUNT(1) num,DATE_FORMAT(ipo_day,'%Y%m%d') day_str
+ FROM day_data_ipo_detail WHERE ipo_day IS NOT NULL 
 GROUP BY DATE_FORMAT(ipo_day,'%Y%m%d')
  ORDER BY DATE_FORMAT(ipo_day,'%Y%m%d'))t
  
- select * from day_data_ipo_detail order by ipo_day desc 
+ SELECT * FROM day_data_ipo_detail ORDER BY ipo_day DESC 
 
 
 -- 生成shibo数据

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>bank_policy</name>
+    <name>fr_meeting</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -129,7 +129,7 @@
     </file>
     <fields>
       <field>
-        <name>公布时间</name>
+        <name>开始日期</name>
         <type>Date</type>
         <length>-1</length>
         <precision>-1</precision>
@@ -141,7 +141,7 @@
         <group/>
       </field>
       <field>
-        <name>实施时间</name>
+        <name>结束日期</name>
         <type>Date</type>
         <length>-1</length>
         <precision>-1</precision>
@@ -153,43 +153,7 @@
         <group/>
       </field>
       <field>
-        <name>政策类型</name>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>实施者</name>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>主要品种调整幅度</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>政策内容</name>
+        <name>内容</name>
         <type>String</type>
         <length>-1</length>
         <precision>-1</precision>
@@ -203,7 +167,7 @@
     </fields>
     <sheets>
       <sheet>
-        <name>重大财经政策</name>
+        <name>美联储会议时间</name>
         <startrow>0</startrow>
         <startcol>0</startcol>
         </sheet>
@@ -244,28 +208,16 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <fields>      <field>        <name>公布时间</name>
-        <rename>publish_time</rename>
+    <fields>      <field>        <name>开始日期</name>
+        <rename>begin_date</rename>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>实施时间</name>
-        <rename>act_time</rename>
+      </field>      <field>        <name>结束日期</name>
+        <rename>end_date</rename>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>政策类型</name>
-        <rename>policy_type</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>实施者</name>
-        <rename>applyer</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>主要品种调整幅度</name>
-        <rename>adjust_point</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>政策内容</name>
-        <rename>policy_content</rename>
+      </field>      <field>        <name>内容</name>
+        <rename>meeting_content</rename>
         <length>-2</length>
         <precision>-2</precision>
       </field>        <select_unspecified>N</select_unspecified>
@@ -289,7 +241,7 @@
            </partitioning>
     <connection>sse</connection>
     <schema>sse</schema>
-    <table>financial_policy</table>
+    <table>fr_meeting</table>
     <commit>1000</commit>
     <truncate>Y</truncate>
     <ignore_errors>N</ignore_errors>
