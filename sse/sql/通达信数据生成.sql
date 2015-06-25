@@ -50,8 +50,8 @@ ORDER BY date_str DESC
 SELECT * FROM increment_ipo_detail
 -- where  publish_style = '吸收合并'
 ORDER BY
-seq_num
--- publish_date desc
+-- seq_num
+publish_date DESC
 
 
 TRUNCATE TABLE increment_ipo_detail
@@ -176,6 +176,18 @@ SELECT COUNT(1) num,DATE_FORMAT(apply_day,'%Y%m%d') day_str
  FROM day_data_ipo_detail
  GROUP BY DATE_FORMAT(apply_day,'%Y%m%d'))t
  
+
+-- 生成申购金额数 
+SELECT CONCAT('1|999999|',day_str,'|',num )FROM (
+SELECT SUM(ipo_amount) num,DATE_FORMAT(ipo_day,'%Y%m%d') day_str
+ FROM day_data_ipo_detail
+ GROUP BY DATE_FORMAT(ipo_day,'%Y%m%d'))t
+ ORDER BY day_str DESC 
+
+ 
+SELECT *
+ FROM day_data_ipo_detail
+
  
  ORDER BY apply_day DESC
 
@@ -189,6 +201,17 @@ GROUP BY DATE_FORMAT(ipo_day,'%Y%m%d')
  ORDER BY DATE_FORMAT(ipo_day,'%Y%m%d'))t
  
  SELECT * FROM day_data_ipo_detail ORDER BY ipo_day DESC 
+
+ SELECT * FROM day_data_ipo_detail 
+ WHERE ipo_day = '20150217'
+ 
+ 
+ SELECT CONCAT('1|999999|',day_str,'|',num )FROM (
+SELECT AVG(net_apply_success_ratio) num,DATE_FORMAT(ipo_day,'%Y%m%d') day_str
+ FROM day_data_ipo_detail WHERE ipo_day IS NOT NULL 
+GROUP BY DATE_FORMAT(ipo_day,'%Y%m%d')
+ ORDER BY DATE_FORMAT(ipo_day,'%Y%m%d'))t
+ ORDER BY day_str DESC 
 
 
 -- 生成shibo数据
