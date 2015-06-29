@@ -176,6 +176,38 @@ SELECT COUNT(1) num,DATE_FORMAT(apply_day,'%Y%m%d') day_str
  FROM day_data_ipo_detail
  GROUP BY DATE_FORMAT(apply_day,'%Y%m%d'))t
  
+ -- 生成申购数据(募集资金)
+
+
+
+SELECT CONCAT('1|999999|',day_str,'|',num )FROM (
+SELECT SUM(ipo_num*ipo_price) num,DATE_FORMAT(apply_day,'%Y%m%d') day_str
+ FROM day_data_ipo_detail
+ GROUP BY DATE_FORMAT(apply_day,'%Y%m%d'))t
+ ORDER BY num DESC 
+ 
+ 
+ -- 通达信数据（利率调整）
+ 
+ SELECT CONCAT('1|999999|',day_str,'|',num )FROM (
+SELECT adjust_point num,DATE_FORMAT(open_day_after,'%Y%m%d') day_str
+ FROM financial_policy
+ WHERE policy_type = '利率调整')t
+
+-- 通达信数据_美联储会议
+
+SELECT * FROM fr_meeting
+
+
+SELECT CONCAT('1|999999|',day_str,'|',1 )FROM (
+SELECT SUM(ipo_num*ipo_price) num,DATE_FORMAT(open_dayu_after,'%Y%m%d') day_str
+ FROM fr_meeting
+ GROUP BY DATE_FORMAT(open_dayu_after,'%Y%m%d'))t
+ 
+-- 申购数据
+
+SELECT * FROM 
+financial_policy
 
 -- 生成申购金额数 
 SELECT CONCAT('1|999999|',day_str,'|',num )FROM (
@@ -185,8 +217,15 @@ SELECT SUM(ipo_amount) num,DATE_FORMAT(ipo_day,'%Y%m%d') day_str
  ORDER BY day_str DESC 
 
  
-SELECT *
+SELECT COUNT(1) num,stock_code
  FROM day_data_ipo_detail
+ GROUP BY stock_code 
+ ORDER BY num DESC 
+
+
+
+SELECT * FROM day_data_ipo_detail
+WHERE stock_code = '300436'
 
  
  ORDER BY apply_day DESC
@@ -203,7 +242,7 @@ GROUP BY DATE_FORMAT(ipo_day,'%Y%m%d')
  SELECT * FROM day_data_ipo_detail ORDER BY ipo_day DESC 
 
  SELECT * FROM day_data_ipo_detail 
- WHERE ipo_day = '20150217'
+ WHERE ipo_day = '20141209'
  
  
  SELECT CONCAT('1|999999|',day_str,'|',num )FROM (
@@ -212,6 +251,11 @@ SELECT AVG(net_apply_success_ratio) num,DATE_FORMAT(ipo_day,'%Y%m%d') day_str
 GROUP BY DATE_FORMAT(ipo_day,'%Y%m%d')
  ORDER BY DATE_FORMAT(ipo_day,'%Y%m%d'))t
  ORDER BY day_str DESC 
+ 
+ 
+  SELECT * FROM day_data_ipo_detail 
+ WHERE ipo_day = '20141203'
+ 
 
 
 -- 生成shibo数据

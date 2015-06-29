@@ -121,7 +121,7 @@
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>F:\git\kettlejobs\sse\综合数据分析（天）\四大证券报_头版.xlsx</name>
+      <name>F:\git\kettlejobs\sse\综合数据分析（天）\股市相关财经政策及国际利率.xlsx</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -142,6 +142,30 @@
       </field>
       <field>
         <name>实施时间</name>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>实施时间星期</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>消息公布后的第一个交易日</name>
         <type>Date</type>
         <length>-1</length>
         <precision>-1</precision>
@@ -268,6 +292,10 @@
         <rename>policy_content</rename>
         <length>-2</length>
         <precision>-2</precision>
+      </field>      <field>        <name>消息公布后的第一个交易日</name>
+        <rename>open_day_after</rename>
+        <length>-2</length>
+        <precision>-2</precision>
       </field>        <select_unspecified>N</select_unspecified>
     </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
@@ -308,7 +336,7 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>392</xloc>
+      <xloc>393</xloc>
       <yloc>161</yloc>
       <draw>Y</draw>
       </GUI>

@@ -3,6 +3,8 @@ package jyl.util.crawler;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLConnection;
+import java.util.ArrayList;
 import java.util.Set;
 
 import com.gargoylesoftware.htmlunit.CookieManager;
@@ -10,6 +12,7 @@ import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.gargoylesoftware.htmlunit.Page;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.WebRequest;
+import com.gargoylesoftware.htmlunit.html.HtmlFont;
 import com.gargoylesoftware.htmlunit.html.HtmlImageInput;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.gargoylesoftware.htmlunit.html.HtmlRadioButtonInput;
@@ -19,18 +22,78 @@ import com.gargoylesoftware.htmlunit.util.Cookie;
 public class Test {
 	public static void main(String args[])
 	{
+			//Test.test2();
+			String url = "http://sc.hkex.com.hk/gb/www.hkex.com.hk/chi/csm/chinaConnect.asp?LangCode=tc";
+			String xpath = "/html/body/table[4]/tbody/tr/td[2]/table/tbody/tr/td/table[1]/tbody/tr/td/table/tbody/tr/td/table/tbody/tr[3]/td[2]/font";
+			String content;
+			try {
+				content = Test.getDataDealJSCSS(url,xpath);
+				System.out.println("content:"+content);
+			} catch (FailingHttpStatusCodeException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			//String content = Test.getContent(url);
+			
+	
+	}
+
+	private static String getDataDealJSCSS(String url, String xpath) throws FailingHttpStatusCodeException, IOException {
+		// TODO Auto-generated method stub
+		String result = "";
+		
+		
+		  URL link=new URL(url); 
+	      WebClient wc=new WebClient();
+	      WebRequest request=new WebRequest(link); 
+	      request.setCharset("UTF-8");
+	  //    request.setProxyHost("120.120.120.x");
+	  //    request.setProxyPort(8080);
+	     // request.setAdditionalHeader("Referer", refer);//设置请求报文头里的refer字段
+	      ////设置请求报文头里的User-Agent字段
+	      request.setAdditionalHeader("User-Agent", "Mozilla/5.0 (Windows NT 5.1; rv:6.0.2) Gecko/20100101 Firefox/6.0.2");
+	      //wc.addRequestHeader("User-Agent", "Mozilla/5.0 (Windows NT 5.1; rv:6.0.2) Gecko/20100101 Firefox/6.0.2");
+	      //wc.addRequestHeader和request.setAdditionalHeader功能应该是一样的。选择一个即可。
+	      //其他报文头字段可以根据需要添加
+	     // wc.getCookieManager().setCookiesEnabled(true);//开启cookie管理
+	      wc.getOptions().setJavaScriptEnabled(true);//开启js解析。对于变态网页，这个是必须的
+	      wc.getOptions().setCssEnabled(false);//开启css解析。对于变态网页，这个是必须的。
+	      HtmlPage page=null;
+	      page = wc.getPage(request);
+	      //HtmlFont
+	     // Object obj = page.getByXPath(xpath);
+	      ArrayList<HtmlFont> list = (ArrayList<HtmlFont>)page.getByXPath(xpath);
+	      HtmlFont ht = list.get(0);
+	   String xpathStr =  ht.getFirstChild().getCanonicalXPath();
+	   System.out.println("xpathStr:"+xpathStr);
+	    result =   ht.getFirstChild().getTextContent();
+	    	  
+		return result;
+	}
+
+	private static String getContent(String url) {
+		// TODO Auto-generated method stub
+		 URL link;
 		try {
-			Test.test2();
+			link = new URL(url);
+			 URLConnection con = link.openConnection();
+				// con.getInputStream();
+				String content =(String) con.getContent();
+				return content;
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} catch (FailingHttpStatusCodeException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			return null;
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+			return null;
+		} 
+		
+	
 	}
 
 	private static void test2() throws FailingHttpStatusCodeException, IOException {
@@ -183,6 +246,37 @@ public class Test {
         Set<Cookie> cookies_ret = CM.getCookies();//返回的Cookie在这里，下次请求的时候可能可以用上啦。
 	}
 
+
+
+
+public static String getDataNoDealJSCSS(String url,String xpath) throws FailingHttpStatusCodeException, IOException
+{
+	String result = "";
+	
+	
+	  URL link=new URL(url); 
+      WebClient wc=new WebClient();
+      WebRequest request=new WebRequest(link); 
+      request.setCharset("UTF-8");
+  //    request.setProxyHost("120.120.120.x");
+  //    request.setProxyPort(8080);
+     // request.setAdditionalHeader("Referer", refer);//设置请求报文头里的refer字段
+      ////设置请求报文头里的User-Agent字段
+      request.setAdditionalHeader("User-Agent", "Mozilla/5.0 (Windows NT 5.1; rv:6.0.2) Gecko/20100101 Firefox/6.0.2");
+      //wc.addRequestHeader("User-Agent", "Mozilla/5.0 (Windows NT 5.1; rv:6.0.2) Gecko/20100101 Firefox/6.0.2");
+      //wc.addRequestHeader和request.setAdditionalHeader功能应该是一样的。选择一个即可。
+      //其他报文头字段可以根据需要添加
+     // wc.getCookieManager().setCookiesEnabled(true);//开启cookie管理
+      wc.getOptions().setJavaScriptEnabled(false);//开启js解析。对于变态网页，这个是必须的
+      wc.getOptions().setCssEnabled(false);//开启css解析。对于变态网页，这个是必须的。
+      HtmlPage page=null;
+      page = wc.getPage(request);
+     Object obj= page.getByXPath(xpath);
+     if(obj!=null)
+    	 result = (String) obj;
+	return result;
+	
+	
+	}
+
 }
-
-
