@@ -22,14 +22,40 @@ public class SinaStockDataFetcher {
 		// TODO Auto-generated method stub
 //http://hq.sinajs.cn/list=sh000016,sh601857
 		//MainDispatcher
-		SinaStockDataFetcher fetcher = new SinaStockDataFetcher();
+	/*	SinaStockDataFetcher fetcher = new SinaStockDataFetcher();
 		try {
 			CompareBean resultBean =	fetcher.getDatas();
 			System.out.println("bean:"+resultBean);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}*/
+		SinaStockDataFetcher fetcher = new SinaStockDataFetcher();
+		fetcher.dealRaw();
+	}
+
+	private void dealRaw() {
+		// TODO Auto-generated method stub
+		while(true){
+			try {
+				Thread.sleep(1000);
+				dealDataOneMonent();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
+		
+	}
+
+	private void dealDataOneMonent() {
+		// TODO Auto-generated method stub
+		String rawData = getRawDATA();
+	}
+
+	private String getRawDATA() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	private CompareBean getDatas() throws IOException {
