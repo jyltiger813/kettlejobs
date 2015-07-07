@@ -176,6 +176,11 @@ SELECT COUNT(1) num,DATE_FORMAT(apply_day,'%Y%m%d') day_str
  FROM day_data_ipo_detail
  GROUP BY DATE_FORMAT(apply_day,'%Y%m%d'))t
  
+ -- 某一天上市的新股
+ 
+ SELECT * FROM 
+ day_data_ipo_detail
+ 
  -- 生成申购数据(募集资金)
 
 
