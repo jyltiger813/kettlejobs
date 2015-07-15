@@ -26,7 +26,7 @@ public class HuGuTongRealTimeDealer {
 				String content = fethcerCurrentDataOneTime();
 				System.out.println("content:"+content);
 				if(content!=null&&content.length()>20)
-				FileUtil.append2File("f:/loanbuy20150707.txt",content+"\r\n");
+				FileUtil.append2File("f:/loanbuy20150715.txt",content+"\r\n");
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

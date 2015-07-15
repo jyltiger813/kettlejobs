@@ -7,16 +7,8 @@ import java.util.HashMap;
 
 public class FileUtil {
 
-	static HashMap<String,RandomAccessFile> files = new HashMap<String,RandomAccessFile>();
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	//	FileUtil.test1();
-		
-		FileUtil.append2File("f:/t1.txt","测试\r\n");
-		
-		
-	}
+	public static HashMap<String,RandomAccessFile> files = new HashMap<String,RandomAccessFile>();
+	
 
 	public static void append2File(String filePath, String content) {
 		// TODO Auto-generated method stub
