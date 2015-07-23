@@ -1,6 +1,7 @@
 package jyl.realtime.shang2hongkong;
 
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.TreeMap;
 
 import jyl.util.crawler.JSCssModeDealer;
@@ -11,12 +12,13 @@ import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 public class HuGuTongRealTimeDealer {
 	public static void main(String args[])
 	{
-		HuGuTongRealTimeDealer dealer = new HuGuTongRealTimeDealer();
+		jyl.realtime.shang2hongkong.HuGuTongRealTimeDealer dealer = new HuGuTongRealTimeDealer();
 		//dealer.dealDatas();
 		dealer.dealDatasTmp();
+	//java.util.Calendar.getInstance().toString();
 	}
 
-	private void dealDatasTmp() {
+	public static void dealDatasTmp() {
 		// TODO Auto-generated method stub
 		while(true)
 		{
@@ -26,7 +28,7 @@ public class HuGuTongRealTimeDealer {
 				String content = fethcerCurrentDataOneTime();
 				System.out.println("content:"+content);
 				if(content!=null&&content.length()>20)
-				FileUtil.append2File("f:/loanbuy20150715.txt",content+"\r\n");
+				FileUtil.append2File("f:/loanbuy20150722.txt",content+"\r\n");
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -55,6 +57,7 @@ public class HuGuTongRealTimeDealer {
 		params.put(xpathName3, xpathValue3);
 		try {
 			TreeMap<String,String> values = JSCssModeDealer.getDataDealJSCSSXpaths(params,url);
+		//	TreeMap<String,String> values = JSCssModeDealer.getDataDealNOJSCSSXpaths(params,url);
 			System.out.println(values.size());
 		} catch (FailingHttpStatusCodeException e) {
 			// TODO Auto-generated catch block
@@ -65,7 +68,7 @@ public class HuGuTongRealTimeDealer {
 		}
 	}
 	
-	private String fethcerCurrentDataOneTime() {
+	private static String fethcerCurrentDataOneTime() {
 		// TODO Auto-generated method stub
 		TreeMap<String,String> params = new TreeMap<String,String>();	
 		String xpathName1 = "shanghai_share_buy";
