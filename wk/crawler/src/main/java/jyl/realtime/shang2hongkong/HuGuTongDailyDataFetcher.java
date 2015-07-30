@@ -19,8 +19,8 @@ public class HuGuTongDailyDataFetcher {
 		// TODO Auto-generated method stub
 		HuGuTongDailyDataFetcher fetcher = new HuGuTongDailyDataFetcher();
 		//fetcher.test1();
-		fetcher.test2();
-		//fetcher.dealOneDayBeforeNdays(90);
+	//	fetcher.test2();
+		fetcher.dealOneDayBeforeNdays(4);
 	//	fetcher.dealOneDay("20150722");
 	}
 
@@ -69,7 +69,7 @@ public class HuGuTongDailyDataFetcher {
 	private void dealOneDayBeforeNdays(int dNum) {
 		// TODO Auto-generated method stub
 		Calendar cal = Calendar.getInstance();
-		cal = DateTimeUtil.getNdayBefore(cal, 89);
+	//	cal = DateTimeUtil.getNdayBefore(cal, 89);
 		for(int i=0;i<dNum;i++){
 		String dayStr = DateTimeUtil.getDateStrEight(cal);
 		DateTimeUtil.getYesterDayNotWeekend(cal);

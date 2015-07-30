@@ -106,7 +106,7 @@
            </partitioning>
     <connection>sse</connection>
     <sql> SELECT CONCAT(&apos;1|999999|&apos;,DATE_FORMAT(t2.statistic_day,&apos;%Y%m%d&apos;),&apos;|&apos;,
-(t2.one_year - t1.one_year )&#47;t1.one_year *100)
+(t2.one_year - t1.one_year)*10000 )
 FROM(
 SELECT @rownum:=@rownum+1 rownum, statistic_day,one_year FROM
 (SELECT @rownum:=0,statistic_day,one_year 
@@ -142,7 +142,7 @@ order by t1.statistic_day desc </sql>
            </partitioning>
     <connection>sse</connection>
     <sql> SELECT CONCAT(&apos;1|999999|&apos;,DATE_FORMAT(t2.statistic_day,&apos;%Y%m%d&apos;),&apos;|&apos;,
-(t2.one_day - t1.one_day )&#47;t1.one_day *100)
+t2.one_day - t1.one_day )
 FROM(
 SELECT @rownum:=@rownum+1 rownum, statistic_day,one_day FROM
 (SELECT @rownum:=0,statistic_day,one_day 
@@ -210,7 +210,7 @@ order by t1.statistic_day desc </sql>
     <fields>
       <field>
         <name>CONCAT(&apos;1|999999|&apos;,DATE_FORMAT(t2.statistic_day,&apos;%Y%m%d&apos;),&apos;|&apos;,
-(t2.one_year - t1.one_year )&#47;t1.one_year *100)</name>
+(t2.one_year - t1.one_year)*10000 )</name>
         <type>String</type>
         <format/>
         <currency/>
@@ -274,7 +274,7 @@ order by t1.statistic_day desc </sql>
     <fields>
       <field>
         <name>CONCAT(&apos;1|999999|&apos;,DATE_FORMAT(t2.statistic_day,&apos;%Y%m%d&apos;),&apos;|&apos;,
-(t2.one_day - t1.one_day )&#47;t1.one_day *100)</name>
+t2.one_day - t1.one_day )</name>
         <type>String</type>
         <format/>
         <currency/>
