@@ -1,4 +1,4 @@
--- etl份额数据
+-- etf份额数据
 etl_bond_day_detail
 
 
